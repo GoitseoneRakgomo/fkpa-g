@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Intelligence — FKPA Global</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Novecento+Wide:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">   
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+    <style>
+        /* Specific styling to make dense legal text highly readable */
+        .legal-section {
+            padding: 80px 8%;
+            background: var(--deep-black);
+        }
+        .legal-text-wrapper {
+            max-width: 800px; /* Constrains width for comfortable reading */
+            margin: 0 auto;
+        }
+        .legal-text-wrapper h2 {
+            font-size: 24px !important;
+            color: var(--gold-primary);
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+        .legal-text-wrapper h2:first-child {
+            margin-top: 0;
+        }
+        .legal-text-wrapper h2::after {
+            display: none !important; /* Removes the gold underline for inline legal headers */
+        }
+        .legal-text-wrapper p, 
+        .legal-text-wrapper ul {
+            color: rgba(255, 255, 255, 0.7);
+            font-family: var(--font-serif);
+            font-size: 15px !important;
+            line-height: 1.8 !important;
+            margin-bottom: 20px;
+        }
+        .legal-text-wrapper ul {
+            padding-left: 20px;
+        }
+        .legal-text-wrapper li {
+            margin-bottom: 10px;
+        }
+        .last-updated {
+            font-family: var(--font-wide);
+            font-size: 11px;
+            letter-spacing: 0.15em;
+            color: rgba(197, 160, 89, 0.6);
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            display: block;
+            text-align: center;
+        }
+        .legal-text-wrapper {
+            max-width: 800px; /* Constrains width for comfortable reading */
+            margin-left: 0; /* Snaps the text to the exact left padding line as the logo */
+            margin-right: auto; /* Keeps the right side flexible */
+        }
+        
+        .last-updated {
+            font-family: var(--font-wide);
+            font-size: 11px;
+            letter-spacing: 0.15em;
+            color: rgba(197, 160, 89, 0.6);
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            display: block;
+            text-align: left; /* Changed from center to match the new left alignment */
+        }
+        .legal-text-wrapper {
+            max-width: 100%; /* Removes the 800px constraint to allow full stretching */
+            width: 100%;     /* Forces it to fill the entire space */
+            margin: 0;       /* Resets margins since it's now perfectly filling the container */
+        }
+        /* =========================================================
+           LEGAL HERO FIXES (Height & Left Alignment)
+           ========================================================= */
+        .newsletter-hero {
+            min-height: 60vh !important; /* Increases the height */
+            justify-content: flex-start !important; /* Pushes content to the left edge of the container */
+        }
+        .newsletter-hero-content {
+            text-align: left !important; /* Forces the text to align left */
+            width: 100%;
+        }
+        .newsletter-hero-content .divider {
+            margin-left: 0 !important; /* Snaps the gold line perfectly to the left */
+        }
+    </style>
+<body>
+
+    <header>
+    <a href="/" class="logo-container">
+        <img src="/static/logos/Fortkobbe Logo.svg" alt="Logo" class="logo-img">
+    </a>
+    
+    <div class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+
+    <nav>
+        <ul id="nav-menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="/#services">Precious Metals</a></li>
+            <li><a href="/#vaults">Global Storage</a></li>
+            <li><a href="/#acquisition-lifecycle">How It Works</a></li>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#faq">FAQs</a></li>
+        </ul>
+    </nav>
+    <a href="/#contact" class="header-btn-wrap"><button class="btn btn-outline">Speak With Our Team</button></a>
+</header>
+
+    <section class="newsletter-hero" style="background-image: linear-gradient(to bottom, rgba(5, 5, 5, 0.7), rgba(5, 5, 5, 0.95)), url('{{ url_for('static', filename='images/back1.png') }}');">
+        <div class="newsletter-hero-content fade-up">
+            <span class="section-label">Market Intelligence</span>
+            <h1 class="hero-title">Exclusive <span>Insights.</span></h1>
+            <div class="divider"><div class="crest-icon"></div></div>
+            <p class="hero-description">
+                Geopolitical analysis, macroeconomic shifts, and institutional strategies for physical precious metals. Delivered directly to your private inbox.
+            </p>
+        </div>
+    </section>
+
+    <section class="subscription-section">
+        <div class="subscription-box  fade-up">
+            <div class="stamp-mark" style="margin-bottom: 20px; border-color: var(--gold-primary);">
+                <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <h2>Join The Private Dispatch</h2>
+            <p style="text-align: center; margin-bottom: 30px;">Enter your credentials to receive periodic briefings on global liquidity, vaulting protocols, and physical asset acquisition.</p>
+            
+            <form class="newsletter-form">
+                <div class="form-group">
+                    <input type="email" placeholder="Enter your email address..." required>
+                </div>
+                <button type="submit" class="btn-form-submit">
+                    <span>Subscribe</span>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <section class="publications-section">
+        <div class="section-header fade-up draw-line">
+            <span class="section-label">The Archive</span>
+            <h2>Recent Publications</h2>
+        </div>
+
+        <div class="publication-grid">
+            
+            <div class="news-card fade-up">
+                <div class="news-image">
+                    <img src="{{ url_for('static', filename='images/b33.jfif') }}" alt="Publication">
+                </div>
+                <div class="news-content">
+                    <span class="service-card-num" style="margin-bottom: 10px; display: block;">Q3 2026</span>
+                    <h3>Global Market Shifts</h3>
+                    <p>An in-depth look at how macroeconomic policies are driving institutional accumulation of physical gold across emerging markets.</p>
+                    <a href="#" class="read-article-link">Read Dispatch &rarr;</a>
+                </div>
+            </div>
+
+            <div class="news-card fade-up fade-delay-1">
+                <div class="news-image">
+                    <img src="{{ url_for('static', filename='images/b44.jfif') }}" alt="Publication">
+                </div>
+                <div class="news-content">
+                    <span class="service-card-num" style="margin-bottom: 10px; display: block;">Q2 2026</span>
+                    <h3>Industrial Silver Demand</h3>
+                    <p>Analyzing the surging demand for industrial silver and its impact on long-term physical asset valuations and supply deficits.</p>
+                    <a href="#" class="read-article-link">Read Dispatch &rarr;</a>
+                </div>
+            </div>
+
+            <div class="news-card fade-up fade-delay-2">
+                <div class="news-image">
+                    <img src="{{ url_for('static', filename='images/b5.jfif') }}" alt="Publication">
+                </div>
+                <div class="news-content">
+                    <span class="service-card-num" style="margin-bottom: 10px; display: block;">Q1 2026</span>
+                    <h3>Dubai's Vaulting Advantage</h3>
+                    <p>Why High-Net-Worth Individuals are increasingly choosing Dubai for tax-free, hyper-secure precious metals storage protocols.</p>
+                    <a href="#" class="read-article-link">Read Dispatch &rarr;</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    
+<footer class="footer">
+   
+       
+    <div class="footer-main-links">
+<div class="footer-seal-col">
+    <div class="circular-seal">
+        <svg viewBox="0 0 120 120" class="seal-svg">
+            <path id="seal-curve" d="M 60, 60 m -45, 0 a 45,45 0 1,1 90,0 a 45,45 0 1,1 -90,0" fill="transparent" />
+            <text>
+                <textPath href="#seal-curve" startOffset="0" textLength="280" lengthAdjust="spacing">
+                    PRIVACY BY DESIGN &bull; WEALTH BY INTENTION &bull;
+                </textPath>
+            </text>
+        </svg>
+        <img src="/static/logos/Fortkobbe Logo.svg" class="seal-inner-logo" alt="FKPA Shield">
+    </div>
+</div>
+        
+        <div class="footer-link-col">
+            <h4>MEMBERSHIP</h4>
+            <a href="/#about">About FKPA Global</a>
+            <a href="/#who-we-serve">Who We Serve</a>
+            <a href="/#why-fkpa">Why FKPA Global</a>
+            <a href="/#vaults">Global Operations</a>
+        </div>
+        
+        <div class="footer-link-col">
+            <h4>CAPABILITIES</h4>
+            <a href="#">Precious Metals Access</a>
+            <a href="#">Secure Storage Solutions</a>
+            <a href="#">Strategic Advisory</a>
+            <a href="#">Market Intelligence</a>
+        </div>
+        
+        <div class="footer-link-col">
+            <h4>RESOURCES</h4>
+            <a href="/#process">Insights</a>
+            <a href="/#latest-news">Latest News</a>
+            <a href="/#faq">Frequently Asked Questions</a>
+        </div>
+        
+        <div class="footer-link-col">
+            <h4>CONNECT</h4>
+            <p>Email<br><a href="mailto:info@fkpaglobal.com">info@fkpaglobal.com</a></p>
+            <p>Location<br>Global Operations</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="footer-copy">
+            &copy; 2026 FKPA Global. All rights reserved.
+        </div>
+        <div class="footer-legal">
+            <a href="/privacy">Privacy Policy</a>
+            <a href="/terms">Terms & Conditions</a>
+            <a href="/disclaimer">Disclaimer</a>
+            <a href="/cookies">Cookie Policy</a>
+        </div>
+    </div>
+</footer>
+
+    <script>
+        const animationObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: "0px 0px -10% 0px" });
+
+        document.querySelectorAll('.fade-up, .draw-line, .gold-glow').forEach(el => {
+            animationObserver.observe(el);
+        });
+    </script>
+</body>
+</html>

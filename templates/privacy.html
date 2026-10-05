@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — FKPA Global</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Novecento+Wide:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">   
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <style>
+        /* Specific styling to make dense legal text highly readable */
+        .legal-section {
+            padding: 80px 8%;
+            background: var(--deep-black);
+        }
+        .legal-text-wrapper {
+            max-width: 100%; /* Removes the constraint to allow full stretching */
+            width: 100%;     /* Forces it to fill the entire space */
+            margin: 0;       /* Aligns seamlessly with the global padding */
+        }
+        .legal-text-wrapper h2 {
+            font-size: 24px !important;
+            color: var(--gold-primary);
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+        .legal-text-wrapper h2:first-child {
+            margin-top: 0;
+        }
+        .legal-text-wrapper h2::after {
+            display: none !important; /* Removes the gold underline for inline legal headers */
+        }
+        .legal-text-wrapper p, 
+        .legal-text-wrapper ul {
+            color: rgba(255, 255, 255, 0.7);
+            font-family: var(--font-serif);
+            font-size: 15px !important;
+            line-height: 1.8 !important;
+            margin-bottom: 20px;
+        }
+        .legal-text-wrapper ul {
+            padding-left: 20px;
+        }
+        .legal-text-wrapper li {
+            margin-bottom: 10px;
+        }
+        .legal-text-wrapper a {
+            color: var(--gold-primary);
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+        .legal-text-wrapper a:hover {
+            opacity: 0.8;
+        }
+        .last-updated {
+            font-family: var(--font-wide);
+            font-size: 11px;
+            letter-spacing: 0.15em;
+            color: rgba(197, 160, 89, 0.6);
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            display: block;
+            text-align: left; /* Matched to left alignment */
+        }
+        /* =========================================================
+           LEGAL HERO FIXES (Height & Left Alignment)
+           ========================================================= */
+        .newsletter-hero {
+            min-height: 60vh !important; /* Increases the height */
+            justify-content: flex-start !important; /* Pushes content to the left edge of the container */
+        }
+        .newsletter-hero-content {
+            text-align: left !important; /* Forces the text to align left */
+            width: 100%;
+        }
+        .newsletter-hero-content .divider {
+            margin-left: 0 !important; /* Snaps the gold line perfectly to the left */
+        }
+    </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+    <a href="/" class="logo-container">
+        <img src="/static/logos/Fortkobbe Logo.svg" alt="Logo" class="logo-img">
+    </a>
+    
+    <div class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+
+    <nav>
+        <ul id="nav-menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="/#services">Precious Metals</a></li>
+            <li><a href="/#vaults">Global Storage</a></li>
+            <li><a href="/#acquisition-lifecycle">How It Works</a></li>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#faq">FAQs</a></li>
+        </ul>
+    </nav>
+    <a href="/#contact" class="header-btn-wrap"><button class="btn btn-outline">Speak With Our Team</button></a>
+</header>
+
+    <section class="newsletter-hero" style="background-image: linear-gradient(to bottom, rgba(5, 5, 5, 0.8), rgba(5, 5, 5, 0.98)), url('{{ url_for('static', filename='images/back1.png') }}'); min-height: 40vh;">
+        <div class="newsletter-hero-content">
+            <span class="section-label">Legal</span>
+            <h1 class="hero-title">Privacy <span>Policy</span></h1>
+            <div class="divider"><div class="crest-icon"></div></div>
+        </div>
+    </section>
+
+    <section class="legal-section">
+        <div class="legal-text-wrapper">
+            <span class="last-updated">Last Reviewed: 16 June 2026</span>
+
+            <h2>1. INTRODUCTION</h2>
+            <p>This Privacy Policy explains how FKPA Global FZCO ("we", "us", "our" or the "Company") collects, uses, shares, retains and protects personal data when you visit the website at <a href="http://www.fkpag.com">www.fkpag.com</a> (the "Website"), when you contact us through the Website, when you submit an enquiry, application or onboarding documentation, or when you otherwise interact with us in connection with the Website.</p>
+            <p>We are committed to protecting your privacy and to processing your personal data lawfully, fairly and transparently. Please read this Privacy Policy carefully. By using the Website, you confirm that you have read and understood this Privacy Policy.</p>
+            <p>This Privacy Policy should be read together with our Terms and Conditions of Business, our Website Terms of Use, our Cookies Policy (where published separately) and our internal Data Protection and Privacy Policy, which contains the full framework governing all personal data processing carried out by the Company.</p>
+
+            <h2>2. WHO WE ARE</h2>
+            <p>FKPA Global FZCO is a Free Zone Company licensed by the International Free Zone Authority (IFZA) and registered in the United Arab Emirates under licence number 34081, with its registered office at Building A1, Dubai Digital Park, Dubai Silicon Oasis, Dubai, United Arab Emirates.</p>
+            <p>The Company is the controller of the personal data described in this Privacy Policy. The Company’s Head of Risk and Compliance acts as the Company’s Data Protection Officer and can be contacted at <a href="mailto:info@fkpag.com">info@fkpag.com</a>.</p>
+
+            <h2>3. SCOPE OF THIS PRIVACY POLICY</h2>
+            <p>This Privacy Policy covers personal data we collect when you:</p>
+            <ul>
+                <li>visit, browse or otherwise interact with the Website;</li>
+                <li>submit an enquiry, request a quotation, request information or contact us through any form on the Website or by email, telephone or other means linked from the Website;</li>
+                <li>register for a customer account or any restricted area of the Website (where available);</li>
+                <li>submit onboarding information, identity documents and other due-diligence materials through the Website or in connection with the customer onboarding process;</li>
+                <li>subscribe to any newsletter, market update, mailing list or other communication offered through the Website;</li>
+                <li>apply for a vacancy advertised on the Website or submit a speculative application; or</li>
+                <li>respond to any survey, questionnaire or marketing communication issued by us.</li>
+            </ul>
+            <p>This Privacy Policy does not apply to third-party websites that are linked from the Website. We are not responsible for the privacy practices of those websites; please review their privacy notices before providing personal data to them.</p>
+
+            <h2>4. PERSONAL DATA WE COLLECT</h2>
+            <p>Depending on how you interact with us, we may collect the following categories of personal data:</p>
+            
+            <p><strong>Information you provide to us:</strong></p>
+            <ul>
+                <li>identification details such as your full name, date of birth, nationality, country of residence, identification numbers, passport or national identity card details, and visa or residence status, where required for onboarding;</li>
+                <li>contact details such as your postal address, email address, telephone numbers, employer or affiliation and job title;</li>
+                <li>professional and corporate information such as the legal entity you act for, your role within it, the entity’s registration and licensing details, beneficial ownership information and management structure;</li>
+                <li>financial information such as bank account details, tax registration numbers, source of funds and source of wealth declarations, and details of intended transactions;</li>
+                <li>compliance-related information such as PEP declarations, sanctions screening results, adverse media information, and information about your previous and current sources of precious metals;</li>
+                <li>content of communications such as the subject matter and content of enquiries, correspondence, telephone calls (which may be recorded where lawful and where notified to you) and other interactions;</li>
+                <li>marketing preferences such as your communication preferences and your responses to surveys and questionnaires; and</li>
+                <li>application information where you apply for a vacancy, including your CV, employment history, qualifications, references and any other information you provide in support of your application.</li>
+            </ul>
+
+            <p><strong>Information collected automatically:</strong></p>
+            <ul>
+                <li>technical information such as your internet protocol (IP) address, device type, operating system, browser type and version, language settings, time-zone setting and screen resolution;</li>
+                <li>usage information such as the pages you visit, the time and duration of your visit, the links you click, the pages from which you arrived and to which you depart, and any errors you encounter;</li>
+                <li>cookie data and similar identifiers and in our Cookies Policy; and</li>
+                <li>location information at country or city level inferred from your IP address; we do not collect precise geolocation through the Website.</li>
+            </ul>
+
+            <p><strong>Information received from third parties:</strong></p>
+            <ul>
+                <li>information from sanctions, PEP, adverse media and credit-reference databases, used for compliance screening;</li>
+                <li>information from public registers, including commercial registries, beneficial ownership registries and licensing authorities;</li>
+                <li>information from your colleagues, employer, advisers, agents, banks, auditors or other persons acting on your behalf or representing you; and</li>
+                <li>information from our service providers, such as analytics, hosting, IT security and communications providers.</li>
+            </ul>
+            <p>We do not deliberately collect special categories of personal data (such as data revealing racial or ethnic origin, political opinions, religious beliefs, trade-union membership, health data, biometric or genetic data, or data concerning sexual orientation) through the Website. Where such data is incidentally provided (for example, in a passport copy that discloses nationality), we process it only as strictly necessary for the purpose for which it was provided.</p>
+
+            <h2>5. HOW WE USE YOUR PERSONAL DATA</h2>
+            <p>We use your personal data only for specified, explicit and legitimate purposes and only where we have a lawful basis for the processing under applicable data protection law. The purposes for which we use your personal data, and the lawful basis on which we rely for each, are summarised below:</p>
+            
+            <ul>
+                <li><strong>Responding to enquiries submitted through the Website or otherwise:</strong> Performance of pre-contractual steps at your request; our legitimate interest in responding to those who contact us.</li>
+                <li><strong>Operating, maintaining, securing and improving the Website:</strong> Our legitimate interest in providing a functional, secure and effective website.</li>
+                <li><strong>Onboarding you or the entity you represent as a customer, supplier or counterparty, including the verification of identity, beneficial ownership and source of funds:</strong> Performance of pre-contractual steps at your request; compliance with our legal obligations under UAE anti-money-laundering and counter-terrorism-financing law.</li>
+                <li><strong>Sanctions, PEP and adverse-media screening, and ongoing monitoring of business relationships:</strong> Compliance with our legal obligations; our legitimate interest in preventing financial crime.</li>
+                <li><strong>Performing our contractual obligations, including the supply of buying-and-selling, refining, smelting, assaying, minting and diamond-and-gold separation services:</strong> Performance of the contract between us; our legal obligations.</li>
+                <li><strong>Issuing invoices, processing payments and managing accounts receivable and payable:</strong> Performance of contract; compliance with our legal obligations, including those under tax law.</li>
+                <li><strong>Reporting suspicious transactions to the UAE Financial Intelligence Unit through the goAML system and to other competent authorities:</strong> Compliance with our legal obligations under the UAE anti-money-laundering and counter-terrorism-financing framework.</li>
+                <li><strong>Sending you market updates, newsletters and marketing communications where you have requested these or where we are lawfully entitled to do so:</strong> Your consent (where consent is required); our legitimate interest in promoting our services to existing customers and qualifying business contacts.</li>
+                <li><strong>Managing employment applications, recruitment and onboarding of new staff:</strong> Performance of pre-contractual steps at your request; our legitimate interest in assessing applications; compliance with employment, immigration and labour law.</li>
+                <li><strong>Detecting, investigating and preventing fraud, sanctions evasion, money laundering, cyber-incidents and other unlawful activity:</strong> Compliance with our legal obligations; our legitimate interest in protecting our business and our customers.</li>
+                <li><strong>Defending or pursuing legal claims, and complying with court orders, regulatory requests and other lawful demands:</strong> Compliance with our legal obligations; our legitimate interest in protecting our legal rights.</li>
+            </ul>
+
+            <p>Where we rely on your consent, you may withdraw your consent at any time by contacting us at <a href="mailto:info@fkpag.com">info@fkpag.com</a>. Withdrawal of consent does not affect the lawfulness of processing carried out before the withdrawal and does not affect processing that we are required or permitted to carry out on another lawful basis.</p>
+            <p>Where we rely on our legitimate interests, we have considered, and where appropriate documented, the impact of the processing on your interests, rights and freedoms; you may ask us for further details by contacting us at <a href="mailto:info@fkpag.com">info@fkpag.com</a>.</p>
+
+            <h2>6. ANTI-MONEY-LAUNDERING AND SANCTIONS PROCESSING</h2>
+            <p>As a designated non-financial business or profession (DNFBP) under the UAE anti-money-laundering and counter-terrorism-financing framework, we are required by law to collect, verify, screen, monitor, retain and (where necessary) report personal data relating to our customers, their beneficial owners, their directors and officers, and their authorised representatives.</p>
+            <p>Processing carried out under this framework is based on our legal obligations and on the wider public interest in preventing money laundering, terrorist financing and sanctions evasion. We do not rely on consent as the lawful basis for this processing and the rights of the website user do not allow you to require us to delete, restrict or stop processing personal data that we are required by law to retain or screen. We will also be unable to disclose the existence or content of any suspicious transaction report or related action, as this would breach the tipping-off restrictions imposed by law.</p>
+
+            <h2>7. SHARING YOUR PERSONAL DATA</h2>
+            <p>We do not sell your personal data. We share your personal data only as necessary for the purposes set out in this Privacy Policy and only with recipients that are bound by appropriate confidentiality and data protection obligations. The categories of recipient with whom we may share your personal data include:</p>
+            <ul>
+                <li>our directors, officers, employees and group companies on a need-to-know basis;</li>
+                <li>professional advisers such as lawyers, auditors, accountants, tax advisers and consultants, where engaged in connection with our business;</li>
+                <li>service providers that support our operations, including providers of website hosting, cloud storage, IT support, cyber-security, customer relationship management, email distribution, identity-verification, sanctions-screening, document-management and analytics services;</li>
+                <li>banks, payment service providers, custodians, vault operators, transporters, customs brokers, free-zone authorities and other counterparties engaged in connection with a transaction;</li>
+                <li>competent authorities, including the UAE Ministry of Economy, the Executive Office for Anti-Money Laundering and Counter-Terrorism Financing, the UAE Financial Intelligence Unit, the UAE Federal Tax Authority, UAE Customs, the UAE Data Office, the International Free Zone Authority, courts and tribunals, and equivalent authorities in other jurisdictions, where required or permitted by law;</li>
+                <li>any other person to whom you direct, consent to or authorise disclosure.</li>
+            </ul>
+
+            <h2>8. INTERNATIONAL TRANSFERS</h2>
+            <p>The Company is established in the United Arab Emirates, and our primary processing operations take place in the UAE. However, given the international nature of our business, we may transfer personal data to, or store personal data in, jurisdictions outside the UAE.</p>
+            <p>Where we transfer personal data outside the UAE, we do so in accordance with the UAE Personal Data Protection Law and applicable transfer mechanisms, including transfers to jurisdictions recognised by the UAE Data Office as providing an adequate level of protection, transfers subject to appropriate contractual safeguards, or transfers made in reliance on a permitted derogation (such as where the transfer is necessary for the performance of a contract with you, or for compliance with a legal obligation).</p>
+            <p>Where personal data of individuals located in the European Economic Area or the United Kingdom is transferred outside that area, we rely on the lawful transfer mechanisms recognised under the EU General Data Protection Regulation (GDPR) and the UK GDPR respectively, including, where appropriate, standard contractual clauses.</p>
+            <p>You may contact us at <a href="mailto:info@fkpag.com">info@fkpag.com</a> for further information about the safeguards in place for any specific transfer.</p>
+
+            <h2>9. COOKIES AND SIMILAR TECHNOLOGIES</h2>
+            <p>The Website uses cookies and similar technologies (such as web beacons, pixels and tags) to operate, secure and analyse the Website and, where applicable, to deliver marketing communications. A cookie is a small text file placed on your device when you visit a website.</p>
+            <p>We use the following categories of cookies:</p>
+            <ul>
+                <li><strong>Strictly necessary cookies</strong> — required for the operation of the Website (for example, to enable navigation, to maintain session state and to support security features). These cookies do not require your consent.</li>
+                <li><strong>Functional cookies</strong> — used to remember choices you make and to provide enhanced features (for example, language preferences). These cookies are set with your consent.</li>
+                <li><strong>Performance and analytics cookies</strong> — used to collect information about how visitors use the Website, such as which pages are visited most often and whether visitors encounter errors. We use this information to improve the Website. These cookies are set with your consent.</li>
+                <li><strong>Marketing cookies</strong> — used to deliver marketing communications that are relevant to you and to measure the effectiveness of marketing campaigns. These cookies are set with your consent.</li>
+            </ul>
+            <p>When you first visit the Website, we present a cookie banner allowing you to accept or reject non-essential cookies. You can change your cookie preferences at any time through the cookie settings link on the Website. You can also manage cookies through your browser settings; however, blocking strictly necessary cookies may prevent parts of the Website from functioning properly.</p>
+            <p>Where we publish a separate Cookies Policy on the Website, that policy provides a detailed list of the cookies in use, their purpose, their duration and the third parties that set them.</p>
+
+            <h2>10. MARKETING COMMUNICATIONS</h2>
+            <p>Where we send you marketing communications, we do so only with your consent or where we are otherwise lawfully entitled to do so. Marketing communications may include market updates, newsletters, invitations to events, information about new services and other information that we believe may be of interest to you.</p>
+            <p>You may unsubscribe from marketing communications at any time by following the unsubscribe link in the relevant communication or by contacting us at <a href="mailto:info@fkpag.com">info@fkpag.com</a>. Unsubscribing from marketing communications does not affect non-marketing communications relating to your account, transactions, compliance or our legal obligations.</p>
+
+            <h2>11. HOW LONG WE KEEP YOUR PERSONAL DATA</h2>
+            <p>We retain personal data only for as long as is necessary for the purposes for which it was collected, including any retention required by law. The retention periods we apply are summarised below; the full retention schedule is set out in our internal Data Protection and Privacy Policy and Traceability and Chain of Custody System Documentation:</p>
+            <ul>
+                <li><strong>Website enquiry data (where no business relationship results):</strong> Up to twelve (12) months from the date of the last interaction.</li>
+                <li><strong>Customer onboarding and due-diligence data:</strong> For the duration of the business relationship and at least five (5) years from termination of that relationship.</li>
+                <li><strong>Transaction records and supporting documentation:</strong> At least five (5) years from the date of the transaction.</li>
+                <li><strong>Suspicious transaction reports and underlying analysis:</strong> At least five (5) years from the date of the report, or longer where directed by the competent authority.</li>
+                <li><strong>Sanctions and PEP screening records:</strong> At least five (5) years from the date of the screening event.</li>
+                <li><strong>Server logs and security records:</strong> Up to twelve (12) months, save where retained for longer in connection with a security investigation.</li>
+                <li><strong>Marketing data and preferences:</strong> Until you unsubscribe or otherwise withdraw consent, after which we retain a record of the withdrawal for our internal records.</li>
+                <li><strong>Recruitment data for unsuccessful applicants:</strong> Up to twelve (12) months from the date of the application, unless you consent to a longer period.</li>
+            </ul>
+            <p>Where personal data is subject to a litigation hold, regulatory enquiry, criminal investigation or whistle-blowing investigation, we retain it for the duration of the matter notwithstanding the expiry of the periods above.</p>
+
+            <h2>12. YOUR RIGHTS</h2>
+            <p>Subject to applicable law and to the exceptions set out below, you have the following rights in relation to your personal data:</p>
+            <ul>
+                <li><strong>Right to be informed</strong> — to be told how your personal data is being processed (provided by this Privacy Policy and our other notices).</li>
+                <li><strong>Right of access</strong> — to obtain confirmation that we are processing your personal data and to receive a copy of the personal data we hold about you.</li>
+                <li><strong>Right of rectification</strong> — to require us to correct inaccurate personal data and to complete incomplete personal data.</li>
+                <li><strong>Right of erasure</strong> — to require us to delete your personal data where there is no good reason for us to continue processing it.</li>
+                <li><strong>Right to restrict processing</strong> — to require us to suspend processing of your personal data in certain circumstances.</li>
+                <li><strong>Right to data portability</strong> — to receive the personal data you have provided to us in a structured, commonly used and machine-readable format.</li>
+                <li><strong>Right to object</strong> — to object to processing of your personal data based on our legitimate interests or for direct marketing.</li>
+                <li><strong>Rights in relation to automated decision-making and profiling</strong> — we do not make decisions producing legal or similarly significant effects solely on the basis of automated processing without human review.</li>
+                <li><strong>Right to withdraw consent</strong> — where we rely on your consent, to withdraw that consent at any time.</li>
+                <li><strong>Right to complain</strong> — to lodge a complaint with the UAE Data Office or, where applicable, with the supervisory authority in your country of residence.</li>
+            </ul>
+            <p>Your rights are not absolute. In particular, where we are required by law to retain personal data (for example, under the anti-money-laundering and counter-terrorism-financing framework, tax law or accounting law), we will be unable to delete that personal data, to restrict its processing or to stop screening it against sanctions and PEP lists during the statutory retention period. In such cases we will inform you of the basis for our refusal.</p>
+
+            <h2>13. HOW WE PROTECT YOUR PERSONAL DATA</h2>
+            <p>We implement technical and organisational measures appropriate to the nature, scope, context and purposes of our processing and to the risk to your rights and freedoms. These measures include role-based access controls, multi-factor authentication for systems containing personal data, encryption of personal data at rest and in transit using current industry-standard protocols, regular vulnerability and patch management, documented backup and disaster-recovery arrangements, periodic penetration testing, and ongoing staff training.</p>
+            <p>Despite our measures, no system can be guaranteed to be one-hundred per cent secure. If we become aware of a personal data breach, we will assess and respond to it in accordance with our internal Data Protection and Privacy Policy, including, where required by law, notifying the UAE Data Office and affected data subjects.</p>
+
+            <h2>14. CHANGES TO THIS PRIVACY POLICY</h2>
+            <p>We may update this Privacy Policy from time to time to reflect changes in our practices, our services or the law. The version posted on the Website at the time you visit is the version that applies.</p>
+            <p>Where the changes are material, we will take appropriate steps to bring them to your attention, including (where appropriate) by posting a notice on the Website or by contacting you directly.</p>
+
+            <h2>15. CONTACT AND COMPLAINTS</h2>
+            <p>If you have any question or complaint about this Privacy Policy or about our processing of your personal data, or if you wish to exercise any of your rights, please contact us at:</p>
+            <p>
+                FKPA Global FZCO<br>
+                Building A1, Dubai Digital Park, Dubai Silicon Oasis, Dubai, United Arab Emirates<br>
+                Email: <a href="mailto:info@fkpag.com">info@fkpag.com</a><br>
+                Website: <a href="http://www.fkpaglobal.com">www.fkpaglobal.com</a>
+            </p>
+        </div>
+    </section>
+
+<footer class="footer">
+    <div class="footer-main-links">
+        <div class="footer-seal-col">
+            <div class="circular-seal">
+                <svg viewBox="0 0 120 120" class="seal-svg">
+                    <path id="seal-curve" d="M 60, 60 m -45, 0 a 45,45 0 1,1 90,0 a 45,45 0 1,1 -90,0" fill="transparent" />
+                    <text>
+                        <textPath href="#seal-curve" startOffset="0" textLength="280" lengthAdjust="spacing">
+                            PRIVACY BY DESIGN &bull; WEALTH BY INTENTION &bull;
+                        </textPath>
+                    </text>
+                </svg>
+                <img src="/static/logos/Fortkobbe Logo.svg" class="seal-inner-logo" alt="FKPA Shield">
+            </div>
+        </div>
+        
+        <div class="footer-link-col">
+            <h4>MEMBERSHIP</h4>
+            <a href="/#about">About FKPA Global</a>
+            <a href="/#who-we-serve">Who We Serve</a>
+            <a href="/#why-fkpa">Why FKPA Global</a>
+            <a href="/#vaults">Global Operations</a>
+        </div>
+        
+        <div class="footer-link-col">
+            <h4>CAPABILITIES</h4>
+            <a href="#">Precious Metals Access</a>
+            <a href="#">Secure Storage Solutions</a>
+            <a href="#">Strategic Advisory</a>
+            <a href="#">Market Intelligence</a>
+        </div>
+        
+        <div class="footer-link-col">
+            <h4>RESOURCES</h4>
+            <a href="/#process">Insights</a>
+            <a href="/#latest-news">Latest News</a>
+            <a href="/#faq">Frequently Asked Questions</a>
+        </div>
+        
+        <div class="footer-link-col">
+            <h4>CONNECT</h4>
+            <p>Email<br><a href="mailto:info@fkpaglobal.com">info@fkpaglobal.com</a></p>
+            <p>Location<br>Global Operations</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="footer-copy">
+            &copy; 2026 FKPA Global. All rights reserved.
+        </div>
+        <div class="footer-legal">
+            <a href="/privacy">Privacy Policy</a>
+            <a href="/terms">Terms & Conditions</a>
+            <a href="/disclaimer">Disclaimer</a>
+            <a href="/cookies">Cookie Policy</a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

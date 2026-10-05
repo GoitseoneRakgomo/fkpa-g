@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disclaimer — FKPA Global</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Novecento+Wide:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">   
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <style>
+        /* Specific styling to make dense legal text highly readable */
+        .legal-section {
+            padding: 80px 8%;
+            background: var(--deep-black);
+        }
+        .legal-text-wrapper {
+            max-width: 100%; /* Removes the constraint to allow full stretching */
+            width: 100%;     /* Forces it to fill the entire space */
+            margin: 0;       /* Aligns seamlessly with the global padding */
+        }
+        .legal-text-wrapper h2 {
+            font-size: 24px !important;
+            color: var(--gold-primary);
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+        .legal-text-wrapper h2:first-child {
+            margin-top: 0;
+        }
+        .legal-text-wrapper h2::after {
+            display: none !important; /* Removes the gold underline for inline legal headers */
+        }
+        .legal-text-wrapper p, 
+        .legal-text-wrapper ul {
+            color: rgba(255, 255, 255, 0.7);
+            font-family: var(--font-serif);
+            font-size: 15px !important;
+            line-height: 1.8 !important;
+            margin-bottom: 20px;
+        }
+        .legal-text-wrapper ul {
+            padding-left: 20px;
+        }
+        .legal-text-wrapper li {
+            margin-bottom: 10px;
+        }
+        .legal-text-wrapper a {
+            color: var(--gold-primary);
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+        .legal-text-wrapper a:hover {
+            opacity: 0.8;
+        }
+        .last-updated {
+            font-family: var(--font-wide);
+            font-size: 11px;
+            letter-spacing: 0.15em;
+            color: rgba(197, 160, 89, 0.6);
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            display: block;
+            text-align: left; /* Matched to left alignment */
+        }
+        /* =========================================================
+           LEGAL HERO FIXES (Height & Left Alignment)
+           ========================================================= */
+        .newsletter-hero {
+            min-height: 60vh !important; /* Increases the height */
+            justify-content: flex-start !important; /* Pushes content to the left edge of the container */
+        }
+        .newsletter-hero-content {
+            text-align: left !important; /* Forces the text to align left */
+            width: 100%;
+        }
+        .newsletter-hero-content .divider {
+            margin-left: 0 !important; /* Snaps the gold line perfectly to the left */
+        }
+    </style>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+    <a href="/" class="logo-container">
+        <img src="/static/logos/Fortkobbe Logo.svg" alt="Logo" class="logo-img">
+    </a>
+    
+    <div class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+
+    <nav>
+        <ul id="nav-menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="/#services">Precious Metals</a></li>
+            <li><a href="/#vaults">Global Storage</a></li>
+            <li><a href="/#acquisition-lifecycle">How It Works</a></li>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#faq">FAQs</a></li>
+        </ul>
+    </nav>
+    <a href="/#contact" class="header-btn-wrap"><button class="btn btn-outline">Speak With Our Team</button></a>
+</header>
+
+    <section class="newsletter-hero" style="background-image: linear-gradient(to bottom, rgba(5, 5, 5, 0.8), rgba(5, 5, 5, 0.98)), url('{{ url_for('static', filename='images/back1.png') }}'); min-height: 40vh;">
+        <div class="newsletter-hero-content">
+            <span class="section-label">Legal</span>
+            <h1 class="hero-title">Disclaimer</h1>
+            <div class="divider"><div class="crest-icon"></div></div>
+        </div>
+    </section>
+
+    <section class="legal-section">
+        <div class="legal-text-wrapper">
+            <span class="last-updated">Last Reviewed: 16 June 2026</span>
+
+            <h2>1. "AS IS" AND "AS AVAILABLE" BASIS</h2>
+            <p>The Website, its content, and any information made available through it are provided on an "as is" and "as available" basis. To the fullest extent permitted by applicable law, the Company makes no representation, warranty or undertaking, whether express, implied or statutory, regarding the availability, accessibility, uninterrupted operation, security, reliability, accuracy, completeness, timeliness, merchantability, fitness for a particular purpose, non-infringement, or suitability of the Website, its content, or any information made available through it.</p>
+
+            <h2>2. SYSTEM OPERATIONS & SECURITY</h2>
+            <p>The Company does not warrant that the Website will operate without interruption, delay or error, that any defects will be corrected, or that the Website, its servers or any electronic communications sent by or on behalf of the Company will be free from viruses, malware or other harmful components. You are solely responsible for implementing appropriate safeguards, including antivirus protection, data backups and other security measures.</p>
+
+            <h2>3. NO PROFESSIONAL ADVICE</h2>
+            <p>The Website is provided for general informational purposes only. Nothing contained on the Website constitutes, or should be construed as constituting, investment, financial, legal, tax, accounting or other professional advice, nor does it constitute a recommendation, solicitation, endorsement or offer to buy, sell or hold any precious metals, financial products or other assets. Any market information, commentary, pricing, charts, performance data or other materials published on the Website are provided for informational purposes only, may change without notice, and should not be relied upon as the basis for any investment or commercial decision.</p>
+
+            <h2>4. USER EVALUATION & RESPONSIBILITY</h2>
+            <p>You acknowledge and agree that you are solely responsible for evaluating the accuracy, completeness and suitability of any information obtained through the Website and for obtaining independent professional advice before making any financial, legal, tax or commercial decision or entering into any transaction.</p>
+
+            <h2>5. LIMITATION OF REPRESENTATIONS</h2>
+            <p>Except as expressly provided in these Terms or the Company's applicable agreements and policies, and to the fullest extent permitted by applicable law, the Company disclaims all representations, warranties, conditions and guarantees, whether express, implied or statutory, relating to the Website, its content, and any Services made available through or in connection with the Website.</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-main-links">
+            <div class="footer-seal-col">
+                <div class="circular-seal">
+                    <svg viewBox="0 0 120 120" class="seal-svg">
+                        <path id="seal-curve" d="M 60, 60 m -45, 0 a 45,45 0 1,1 90,0 a 45,45 0 1,1 -90,0" fill="transparent" />
+                        <text>
+                            <textPath href="#seal-curve" startOffset="0" textLength="280" lengthAdjust="spacing">
+                                PRIVACY BY DESIGN &bull; WEALTH BY INTENTION &bull;
+                            </textPath>
+                        </text>
+                    </svg>
+                    <img src="/static/logos/Fortkobbe Logo.svg" class="seal-inner-logo" alt="FKPA Shield">
+                </div>
+            </div>
+            
+            <div class="footer-link-col">
+                <h4>MEMBERSHIP</h4>
+                <a href="/#about">About FKPA Global</a>
+                <a href="/#who-we-serve">Who We Serve</a>
+                <a href="/#why-fkpa">Why FKPA Global</a>
+                <a href="/#vaults">Global Operations</a>
+            </div>
+            
+            <div class="footer-link-col">
+                <h4>CAPABILITIES</h4>
+                <a href="#">Precious Metals Access</a>
+                <a href="#">Secure Storage Solutions</a>
+                <a href="#">Strategic Advisory</a>
+                <a href="#">Market Intelligence</a>
+            </div>
+            
+            <div class="footer-link-col">
+                <h4>RESOURCES</h4>
+                <a href="/#process">Insights</a>
+                <a href="/#latest-news">Latest News</a>
+                <a href="/#faq">Frequently Asked Questions</a>
+            </div>
+            
+            <div class="footer-link-col">
+                <h4>CONNECT</h4>
+                <p>Email<br><a href="mailto:info@fkpaglobal.com">info@fkpaglobal.com</a></p>
+                <p>Location<br>Global Operations</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-copy">
+                &copy; 2026 FKPA Global. All rights reserved.
+            </div>
+            <div class="footer-legal">
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms & Conditions</a>
+                <a href="/disclaimer">Disclaimer</a>
+                <a href="/cookies">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        // Keeps other animated components active, but won't interfere with the static text block
+        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

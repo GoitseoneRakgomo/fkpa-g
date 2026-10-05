@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms & Conditions — FKPA Global</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Novecento+Wide:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">   
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <style>
+        /* Specific styling to make dense legal text highly readable */
+        .legal-section {
+            padding: 80px 8%;
+            background: var(--deep-black);
+        }
+        .legal-text-wrapper {
+            max-width: 800px; /* Constrains width for comfortable reading */
+            margin: 0 auto;
+        }
+        .legal-text-wrapper h2 {
+            font-size: 24px !important;
+            color: var(--gold-primary);
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+        .legal-text-wrapper h2:first-child {
+            margin-top: 0;
+        }
+        .legal-text-wrapper h2::after {
+            display: none !important; /* Removes the gold underline for inline legal headers */
+        }
+        .legal-text-wrapper p, 
+        .legal-text-wrapper ul {
+            color: rgba(255, 255, 255, 0.7);
+            font-family: var(--font-serif);
+            font-size: 15px !important;
+            line-height: 1.8 !important;
+            margin-bottom: 20px;
+        }
+        .legal-text-wrapper ul {
+            padding-left: 20px;
+        }
+        .legal-text-wrapper li {
+            margin-bottom: 10px;
+        }
+        .last-updated {
+            font-family: var(--font-wide);
+            font-size: 11px;
+            letter-spacing: 0.15em;
+            color: rgba(197, 160, 89, 0.6);
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            display: block;
+            text-align: center;
+        }
+        .legal-text-wrapper {
+            max-width: 800px; /* Constrains width for comfortable reading */
+            margin-left: 0; /* Snaps the text to the exact left padding line as the logo */
+            margin-right: auto; /* Keeps the right side flexible */
+        }
+        
+        .last-updated {
+            font-family: var(--font-wide);
+            font-size: 11px;
+            letter-spacing: 0.15em;
+            color: rgba(197, 160, 89, 0.6);
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            display: block;
+            text-align: left; /* Changed from center to match the new left alignment */
+        }
+        .legal-text-wrapper {
+            max-width: 100%; /* Removes the 800px constraint to allow full stretching */
+            width: 100%;     /* Forces it to fill the entire space */
+            margin: 0;       /* Resets margins since it's now perfectly filling the container */
+        }
+        /* =========================================================
+           LEGAL HERO FIXES (Height & Left Alignment)
+           ========================================================= */
+        .newsletter-hero {
+            min-height: 60vh !important; /* Increases the height */
+            justify-content: flex-start !important; /* Pushes content to the left edge of the container */
+        }
+        .newsletter-hero-content {
+            text-align: left !important; /* Forces the text to align left */
+            width: 100%;
+        }
+        .newsletter-hero-content .divider {
+            margin-left: 0 !important; /* Snaps the gold line perfectly to the left */
+        }
+    </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+    <a href="/" class="logo-container">
+        <img src="/static/logos/Fortkobbe Logo.svg" alt="Logo" class="logo-img">
+    </a>
+    
+    <div class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+
+    <nav>
+        <ul id="nav-menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="/#services">Precious Metals</a></li>
+            <li><a href="/#vaults">Global Storage</a></li>
+            <li><a href="/#acquisition-lifecycle">How It Works</a></li>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#faq">FAQs</a></li>
+        </ul>
+    </nav>
+    <a href="/#contact" class="header-btn-wrap"><button class="btn btn-outline">Speak With Our Team</button></a>
+</header>
+
+    <section class="newsletter-hero" style="background-image: linear-gradient(to bottom, rgba(5, 5, 5, 0.8), rgba(5, 5, 5, 0.98)), url('{{ url_for('static', filename='images/back1.png') }}'); min-height: 40vh;">
+        <div class="newsletter-hero-content fade-up">
+            <span class="section-label">Legal</span>
+            <h1 class="hero-title">Terms & <span>Conditions</span></h1>
+            <div class="divider"><div class="crest-icon"></div></div>
+        </div>
+    </section>
+
+    <section class="legal-section">
+        <div class="legal-text-wrapper">
+            <span class="last-updated">Last Reviewed: 16 June 2026</span>
+
+            <h2>1. INTRODUCTION</h2>
+            <p>These terms and conditions of business (the "Terms") govern your access to and use of the website at www.fkpag.com (the "Website") and the supply of the Services by FKPA Global FZCO ("we", "us", "our" or the "Company") to its customers (each a "Customer" or "you").</p>
+            <p>By accessing or using the Website, by submitting an enquiry or order through the Website, or by entering into any Contract with the Company, you confirm that you have read and accepted these Terms and that you have authority to bind the legal person on whose behalf you are acting. If you do not agree to these Terms, you must not use the Website or transact with the Company.</p>
+            <p>These Terms are written in English. Where they are translated into any other language, the English version prevails in the event of inconsistency.</p>
+
+            <h2>2. ABOUT FKPA GLOBAL FZCO</h2>
+            <p>FKPA Global FZCO is a Free Zone Company licensed by the International Free Zone Authority (IFZA), registered in the United Arab Emirates under licence number 34081, with its registered office at Building A1, Dubai Digital Park, Dubai Silicon Oasis, Dubai, United Arab Emirates.</p>
+            <p>The Company operates in the precious metals and stones industry within the meaning of the UAE anti-money laundering framework. The Company's business includes the acquisition, purchase, sale and buy-back of physical precious metals, together with the coordination of secure storage, insured logistics and related precious metals services.</p>
+
+            <h2>3. DEFINITIONS</h2>
+            <p>In these Terms, unless the context requires otherwise:</p>
+            <ul>
+                <li><strong>"AML Laws"</strong> means the UAE anti-money-laundering and counter-terrorist-financing framework, including UAE Federal Decree-Law No. 20 of 2018 (as amended from time to time) and its implementing Cabinet Decision No. 10 of 2019, the rules and circulars issued by the UAE Ministry of Economy and the Executive Office for Anti-Money Laundering and Counter-Terrorism Financing, the FATF Recommendations and any equivalent law of any other jurisdiction applicable to the Company or the Customer.</li>
+                <li><strong>"Business Day"</strong> means a day other than a Friday, Saturday or public holiday in the United Arab Emirates.</li>
+                <li><strong>"Confidential Information"</strong> means any non-public information disclosed by one party to the other in connection with these Terms, in any form, that is marked or identified as confidential or that, by its nature, should reasonably be understood to be confidential.</li>
+                <li><strong>"Contract"</strong> means a binding agreement between the Company and a Customer for the supply of Services.</li>
+                <li><strong>"Customer Materials"</strong> means physical precious metals delivered to or held by the Company in connection with storage, logistics, sale or buy-back services.</li>
+                <li><strong>"Services"</strong> means the acquisition, purchase, sale and buy-back of physical precious metals, together with the coordination of secure storage, insured logistics and related precious metals services offered by the Company.</li>
+                <li><strong>"Trade Confirmation"</strong> means a written confirmation issued by the Company (whether by email, contract note or other written instrument) recording the principal terms agreed between the Company and the Customer for a specific transaction.</li>
+            </ul>
+
+            <h2>4. ACCEPTANCE AND CHANGES TO THESE TERMS</h2>
+            <p>These Terms apply to your use of the Website and to every Contract between you and the Company, to the exclusion of any other terms that you seek to impose or incorporate or that are implied by trade, custom, practice or course of dealing, save where the Company has expressly agreed otherwise in writing signed by an authorised officer.</p>
+            <p>The Company may amend these Terms from time to time by posting an updated version on the Website. The version posted on the Website at the time of your access or at the time a Contract is formed is the version that applies. The "Last Reviewed" date at the foot of this document indicates when these Terms were last updated. Continued use of the Website or placing a further order after publication of an updated version constitutes acceptance of the updated Terms.</p>
+
+            <h2>5. USE OF THE WEBSITE</h2>
+            <p>The Website is provided for general information about the Company and its Services and for the submission of enquiries and orders. The Website is not directed at, and the Services are not offered to, persons in any jurisdiction where the provision of such services would be contrary to law.</p>
+            <p>You may use the Website only for lawful purposes. You must not:</p>
+            <ul>
+                <li>use the Website in any way that breaches any applicable local, national or international law or regulation, or that is fraudulent, deceptive or has any unlawful or harmful purpose or effect;</li>
+                <li>access or attempt to access any part of the Website that is not made available for public use, or any account, system or data that does not belong to you;</li>
+                <li>transmit, upload, post, distribute or otherwise make available any material that contains viruses, worms, time-bombs, trojan horses, spyware, ransomware or any other harmful code, file or program designed to interrupt, damage, destroy or limit the functionality of any computer hardware, software or telecommunications equipment;</li>
+                <li>attempt to gain unauthorised access to the Website, the servers on which the Website is stored, or any server, computer or database connected to the Website, including by means of any denial-of-service or distributed denial-of-service attack;</li>
+                <li>use any automated system, software or technique (including web crawlers, robots, scrapers or data-mining tools) to access, copy, monitor or extract any data or content from the Website without the Company’s prior written consent;</li>
+                <li>reverse engineer, decompile, disassemble or otherwise attempt to derive the source code of any software made available on the Website;</li>
+                <li>impersonate any person or entity, misrepresent your identity or affiliation, or otherwise engage in any conduct that involves fraud, identity theft or deception; or</li>
+                <li>use the Website to harvest or collect personally identifiable information about other users, to send unsolicited commercial communications, or to engage in any activity that would breach the Company’s Data Protection and Privacy Policy.</li>
+            </ul>
+            <p>The Company may, without notice, suspend, restrict or terminate your access to the Website at any time and for any reason, including for breach of these Terms.</p>
+
+            <h2>6. INTELLECTUAL PROPERTY</h2>
+            <p>All intellectual property rights in the Website and in its content (including the text, graphics, layout, design, photographs, images, illustrations, videos, audio, data, software, source code, look and feel, trade marks, trade names, logos, hallmarks and other distinctive signs) are owned by the Company or its licensors and are protected by the laws of the United Arab Emirates and by applicable international intellectual-property conventions.</p>
+            <p>Subject to your compliance with these Terms, the Company grants you a limited, revocable, non-exclusive, non-transferable, non-sub-licensable licence to access and view the Website for your internal business or personal information purposes. No other licence, right, title or interest is granted to you.</p>
+            <p>You must not (and must not permit any third party to) reproduce, copy, store, host, transmit, distribute, publish, modify, adapt, translate, create derivative works of, reverse engineer or otherwise exploit any part of the Website or its content, in any form or by any means, without the Company’s prior written consent, save for the temporary technical copies necessary for ordinary browsing of the Website.</p>
+            <p>"FKPA", "FKPA Global", the FKPA logo and any other marks displayed on the Website are trademarks of the Company or its licensors. No right to use such marks is granted by these Terms.</p>
+
+            <h2>7. ENQUIRIES AND ACCOUNTS</h2>
+            <p>The Website allows visitors to submit enquiries and to provide information for the purpose of opening a customer account. The submission of an enquiry does not constitute an offer by the Company to provide the Services or to enter into any Contract.</p>
+            <p>Where the Company offers customer accounts or other restricted areas of the Website, you are responsible for: providing accurate, current and complete information at the time of registration and for keeping that information up to date; maintaining the confidentiality of any username, password and other access credentials; restricting access to your devices and accounts; and notifying the Company without undue delay if you suspect that any credential has been lost, stolen or compromised. You are responsible for all activity that takes place under your account, save where caused by the Company’s wilful default or gross negligence.</p>
+
+            <h2>8. SERVICES</h2>
+            <p>Subject to these Terms and the Customer's satisfaction of all eligibility, onboarding and compliance requirements, the Company may offer the following Services to qualifying business Customers:</p>
+            <ul>
+                <li>facilitating the acquisition, purchase and sale of physical precious metals, including gold, silver, and other precious metals;</li>
+                <li>coordinating secure storage and custody arrangements for precious metals;</li>
+                <li>coordinating insured transportation and logistics for precious metals;</li>
+                <li>facilitating the buy-back and disposal of precious metals; and</li>
+                <li>such other related precious metals services as the Company may from time to time offer.</li>
+            </ul>
+
+            <h2>9. CUSTOMER ELIGIBILITY AND ONBOARDING</h2>
+            <p>Before the Company will enter into any Contract with you, you must complete the Company’s customer onboarding process. That process is governed by the Company’s Due Diligence Procedures Manual and includes, without limitation:</p>
+            <ul>
+                <li>the completion of the Company’s Know-Your-Customer (KYC) and related forms;</li>
+                <li>the provision of supporting documentation in respect of the Customer’s legal existence, ownership, beneficial ownership, management, financial standing, licences, sources of funds and intended source and destination of precious metals;</li>
+                <li>screening of the Customer, its beneficial owners and its key managerial persons against applicable sanctions, terrorist financing, politically exposed person and adverse media sources;</li>
+                <li>the completion by the Customer of the Company’s Supply Chain Questionnaire where the Customer is a supplier of precious metals to the Company; and</li>
+                <li>the Company’s assignment to the Customer of a customer risk rating (low, medium or high) in accordance with the Due Diligence Procedures Manual.</li>
+            </ul>
+            <p>The Company may at its sole discretion refuse to onboard, or refuse to continue to deal with, any Customer or prospective Customer, and is under no obligation to provide reasons for any such refusal beyond those required by law. Onboarding is not complete, and no Contract may be formed, until the Customer has been formally notified of acceptance in writing.</p>
+            <p>The Customer must inform the Company without undue delay of any change in the information or documentation provided during onboarding, and must respond promptly and fully to any subsequent request by the Company for updated due-diligence information.</p>
+
+            <h2>10. SANCTIONS, ANTI-MONEY-LAUNDERING AND RESPONSIBLE SOURCING</h2>
+            <p>The Customer represents, warrants and undertakes on a continuing basis that:</p>
+            <ul>
+                <li>it is not, and none of its directors, officers, employees, shareholders, beneficial owners or persons exercising effective control over it is, the subject of any sanction, asset freeze, trade embargo, travel ban or other restrictive measure imposed by the United Nations Security Council, the United Arab Emirates, the United States, the United Kingdom, the European Union or any other competent authority;</li>
+                <li>it is not, and none of the persons referred to above is, located, organised or resident in any country or territory that is itself the subject of comprehensive sanctions;</li>
+                <li>it complies, and will continue to comply, with all AML Laws applicable to it and to the transactions undertaken with the Company, including those relating to customer due diligence, transaction monitoring, sanctions screening, record-keeping and the reporting of suspicious transactions;</li>
+                <li>the funds used to pay for any Services, and the precious metals, stones or other Customer Materials delivered to the Company, have been lawfully sourced and acquired and are not the proceeds of, or related to, any criminal activity, terrorist financing, sanctions evasion, conflict financing, the worst forms of child labour, modern slavery or human rights abuses; and</li>
+                <li>it complies, and will continue to comply, with all laws applicable to the trade in precious metals, including those of the country of origin of the metal, the country of dispatch, every country of transit and the country of destination.</li>
+            </ul>
+            <p>The Customer authorises the Company to perform such screening, due-diligence enquiries and reporting as the Company considers necessary or appropriate to discharge its obligations under the AML Laws, and accepts that the Company may delay, suspend, reject, freeze or unwind any transaction, and may decline to release any precious metal or funds, where the Company in its sole discretion considers that to proceed would or might breach any AML Law, sanction or internal compliance requirement. The Customer shall have no claim against the Company in respect of any such action taken in good faith.</p>
+            <p>The Company is required by law to report suspicious transactions to the UAE Financial Intelligence Unit through the goAML system and to comply with tipping-off restrictions. The Customer acknowledges that the Company may be unable to disclose to the Customer the existence or nature of any such report or the reasons for any related action.</p>
+
+            <h2>11. ORDERS, QUOTATIONS AND FORMATION OF CONTRACT</h2>
+            <p>Any quotation, price indication, market commentary, brochure, datasheet or other communication issued by the Company is for information only and does not constitute an offer capable of acceptance.</p>
+            <p>An order placed by the Customer constitutes an offer by the Customer to purchase or sell precious metals, or to procure Services, on these Terms. A Contract is formed only upon the Company issuing a Trade Confirmation to the Customer, at which point the price, weight, fineness, quantity, delivery date, processing terms and any other terms recorded in the Trade Confirmation become binding.</p>
+            <p>Any error, omission or typographical inaccuracy in a quotation, price list, invoice, Trade Confirmation or other Company document may be corrected by the Company without liability, provided that the correction is notified to the Customer promptly after it comes to the Company’s attention.</p>
+            <p>In case of conflict between these Terms and the express terms of a Trade Confirmation signed (electronically or in wet ink) by an authorised officer of the Company, the Trade Confirmation prevails in respect of that Contract only.</p>
+
+            <h2>12. PRICING, INVOICING AND PAYMENT</h2>
+            <p>Prices for precious metals are quoted by reference to the LBMA benchmark or such other recognised reference price as the Trade Confirmation specifies, plus or minus any premium, service fee, transport cost, insurance, storage charge, tax, duty or other charge as recorded in the Trade Confirmation. All amounts are exclusive of VAT, which is added at the rate prevailing at the time of supply where chargeable.</p>
+            <p>Where the Customer qualifies for the zero rating or reverse-charge mechanism applicable under UAE VAT law to investment-grade precious metals or to qualifying business-to-business supplies, the Customer is responsible for providing all evidence and undertakings required to support such treatment and indemnifies the Company against any tax assessment, penalty, interest or other cost arising from the treatment proving incorrect.</p>
+            <p>Payment terms, payment currency, payment account details and settlement timing for each Contract are as recorded in the Trade Confirmation and are governed by the Company’s Payment Policy, which forms part of these Terms. Payment is accepted only by bank transfer from a bank account held in the name of the Customer; payments are not accepted in cryptocurrency, in bearer instruments or by third-party transfer save with the prior written approval of the Compliance Officer. Cash payments are accepted only where the Company’s Payment Policy expressly permits and only subject to the cash-transaction reporting required under UAE law.</p>
+            <p>The Company may at any time set off any sum payable to the Customer against any sum payable by the Customer to the Company, whether or not such sums are presently due. The Customer has no right of set-off, counterclaim, deduction or withholding from any sum payable to the Company.</p>
+
+            <h2>13. NO REFUNDS</h2>
+            <p>Owing to the continuous price volatility of precious metals and the nature of the Services, all Contracts are final on formation. Once a Trade Confirmation has been issued, the Customer may not cancel, vary or withdraw the order, and any amount paid (including any deposit) is non-refundable, save as expressly provided in the Company’s Payment Policy or as required by mandatory law.</p>
+            <p>Where the Customer asserts that delivered metal does not conform to the Trade Confirmation in respect of weight or fineness, the Customer must notify the Company in writing, with supporting evidence (including an independent assay where the Company so requires), within seven (7) days of delivery. Where the Company accepts the claim, its sole remedy is, at the Company’s election, the replacement of, adjustment to, or issue of a credit for, the affected metal; the Company is not obliged to make a cash refund. Claims notified later than the seven-day period are deemed waived save to the extent that the defect could not reasonably have been identified within that period and is notified promptly after discovery.</p>
+            <p>Where the Company suspends, rejects or unwinds a transaction in the exercise of its compliance discretion, any funds received from the Customer will be returned only to the originating Customer account, net of any charges incurred, without interest and subject to the Company’s receipt of any necessary regulatory authorisations.</p>
+            <p>The Customer shall not initiate any chargeback, payment dispute or reversal in respect of any sum properly invoiced under a Contract. The Company reserves the right to recover from the Customer all costs and losses arising from any improper chargeback or payment reversal.</p>
+
+            <h2>14. DELIVERY, RISK AND TITLE</h2>
+            <p>Delivery of metal is effected at the location and on the terms specified in the Trade Confirmation, which may incorporate the relevant or other agreed delivery basis. In the absence of express specification, delivery is taken to occur at the Company’s premises upon the Company making the metal available for collection.</p>
+            <p>Risk in metal sold to the Customer passes on delivery in accordance with the Trade Confirmation; risk in Customer Materials delivered to the Company for Services passes back to the Customer on delivery of the resulting output or on the Company’s notification that the output is ready for collection, whichever is earlier.</p>
+            <p>Title to metal sold by the Company to the Customer does not pass to the Customer until the Company has received payment in full of all sums owing in respect of the relevant Contract and of any other Contract between the parties that is then due for payment.</p>
+
+            <h2>15. CUSTODY AND STORAGE</h2>
+            <p>Where the Company holds metal on behalf of the Customer prior to delivery, after delivery to the Company for Services or for any other reason, the metal is held on the basis recorded in the Trade Confirmation. Unless otherwise expressly agreed in writing, the Company holds such metal on an unallocated basis and is not obliged to segregate the metal physically from other metal of the same description.</p>
+            <p>Storage charges accrue at the rate specified in the Trade Confirmation or, in the absence of specification, at the Company’s standard rates from time to time. The Company is entitled to retain metal until all storage and other charges have been paid in full.</p>
+            <p>The Customer is responsible for insuring its interest in any metal held by the Company on its behalf, save where the Trade Confirmation provides expressly that the Company will insure on the Customer’s behalf and at the Customer’s cost.</p>
+            <p>The Company is not liable for any reduction in weight, fineness or value of Customer Materials attributable to the inherent properties of the material delivered (including the presence of base metals, deleterious elements, moisture or non-metallic contamination not disclosed by the Customer).</p>
+
+            <h2>16. CUSTOMER OBLIGATIONS AND WARRANTIES</h2>
+            <p>The Customer represents, warrants and undertakes on a continuing basis that:</p>
+            <ul>
+                <li>it is duly organised and validly existing under the laws of its jurisdiction of incorporation or residence, and has all necessary corporate power, licences and authorisations to enter into and perform each Contract;</li>
+                <li>all information and documentation provided by it to the Company is true, accurate, complete and up to date, and it will promptly notify the Company of any material change;</li>
+                <li>it has good title to any Customer Materials delivered to the Company, free of any lien, charge, encumbrance or third-party claim;</li>
+                <li>it will comply with all laws and regulations applicable to its activities and to the Contract, including the AML Laws, the laws governing the import, export and trade in precious metals, customs laws and tax laws;</li>
+                <li>it will not use the Services, the Website or any output of the Services for any purpose contrary to law, public policy or these Terms; and</li>
+                <li>it will indemnify the Company in respect of any breach of these warranties.</li>
+            </ul>
+
+            <h2>17. COMPANY WARRANTIES</h2>
+            <p>The Company warrants that it will perform the Services with reasonable skill and care in accordance with the prevailing standards of the precious-metals industry and in accordance with the Trade Confirmation.</p>
+            <p>Save as expressly provided in these Terms or in a Trade Confirmation, the Company gives no warranty, representation or undertaking, whether express or implied, in respect of the Website, the Services, any output of the Services or any market information provided by the Company. In particular, and to the maximum extent permitted by law, all implied terms relating to quality, fitness for purpose, performance, accuracy, completeness, satisfactory performance, freedom from defect, correspondence with description or non-infringement are excluded.</p>
+
+            <h2>18. CONFIDENTIALITY</h2>
+            <p>Each party shall keep confidential, and not disclose to any third party other than its officers, employees, professional advisers, auditors and agents on a need-to-know basis, all Confidential Information of the other party.</p>
+            <p>The duty of confidentiality does not apply to information which:</p>
+            <ul>
+                <li>is or becomes publicly available other than through breach of these Terms;</li>
+                <li>was already lawfully in the possession of the receiving party without an obligation of confidence;</li>
+                <li>is lawfully received from a third party who is not under an obligation of confidence;</li>
+                <li>is independently developed by the receiving party without reference to the disclosing party’s information; or</li>
+                <li>is required to be disclosed by law, regulation, court order or competent authority, provided that, where lawful, the receiving party gives the disclosing party prior notice of the required disclosure.</li>
+            </ul>
+            <p>Nothing in this clause restricts the Company’s ability to make any disclosure required for compliance with the AML Laws, sanctions, tax law or the requirements of any supervisory authority, or to share information with its insurers, auditors or assurance providers under appropriate confidentiality undertakings.</p>
+
+            <h2>19. DATA PROTECTION</h2>
+            <p>The Company processes personal data in accordance with UAE Federal Decree-Law No. 45 of 2021 on the Protection of Personal Data and any other applicable data protection law, as described in the Company’s Data Protection and Privacy Policy, which is available on the Website and which forms part of these Terms.</p>
+            <p>Where the Customer provides personal data of any natural person (including its directors, officers, employees, shareholders, beneficial owners or representatives) to the Company in connection with the Website, onboarding, a Contract or the Services, the Customer warrants that it has the necessary lawful basis to do so and has provided to the data subjects all information required by applicable data protection law, including information about the Company’s processing as set out in the Data Protection and Privacy Policy.</p>
+
+            <h2>20. SUSPENSION AND TERMINATION</h2>
+            <p>The Company may, by notice in writing, suspend the performance of any Contract or terminate the customer relationship with immediate effect if:</p>
+            <ul>
+                <li>the Customer commits a material breach of these Terms or of any Contract and, where the breach is capable of remedy, fails to remedy it within seven (7) days of being notified to do so;</li>
+                <li>the Customer fails to pay any sum due under a Contract on its due date;</li>
+                <li>the Customer becomes insolvent, is unable to pay its debts as they fall due, enters into administration, liquidation, receivership or any similar process, or has a petition presented or order made against it for any of the foregoing;</li>
+                <li>the Customer ceases or threatens to cease to carry on its business;</li>
+                <li>the Customer, or any of its directors, officers, beneficial owners or representatives, becomes the subject of any sanction, asset freeze or restrictive measure;</li>
+                <li>the Company in good faith forms the view that to continue the relationship would, or might, expose the Company to a breach of any AML Law, sanction or other applicable law or to unacceptable reputational risk; or</li>
+                <li>any of the Customer’s warranties is or becomes untrue, inaccurate or misleading in any material respect.</li>
+            </ul>
+            <p>Termination of the customer relationship does not affect any rights, remedies or liabilities accrued at the date of termination.</p>
+
+            <h2>21. FORCE MAJEURE</h2>
+            <p>Neither party is liable for any failure or delay in performance (other than the Customer’s obligations to pay) to the extent caused by an event beyond its reasonable control, including acts of God, fire, flood, earthquake, severe weather, epidemic, pandemic, war, terrorism, civil disturbance, riot, insurrection, government action, sanctions, embargo, currency restriction, strike (other than involving the affected party’s own workforce), failure of utilities, failure of banking systems, cyber-attack or failure of telecommunications infrastructure (each a "Force Majeure Event").</p>
+            <p>The affected party shall notify the other party promptly of the Force Majeure Event and its likely duration, and shall take reasonable steps to mitigate its effects. If a Force Majeure Event continues for more than thirty (30) consecutive days, either party may terminate the affected Contract by written notice, in which case the parties shall in good faith account to each other for amounts paid and unwind any open positions on a fair value basis.</p>
+
+            <h2>22. THIRD-PARTY LINKS AND CONTENT</h2>
+            <p>The Website may contain links to, or content from, third-party websites and resources, including market data, news feeds, regulatory information and price benchmarks. Such links and content are provided for convenience only and do not constitute endorsement by the Company of the linked websites or resources or of the information they contain.</p>
+            <p>The Company has no control over the content, availability, accuracy or completeness of third-party websites or resources, and accepts no liability for any loss arising from your use of or reliance on them. Your access to and use of third-party websites and resources is at your own risk and subject to the terms and policies of the relevant third party.</p>
+
+            <h2>23. LIMITATION OF LIABILITY</h2>
+            <p>Nothing in these Terms excludes or limits any liability that cannot lawfully be excluded or limited, including liability for fraud, fraudulent misrepresentation, death or personal injury caused by negligence, or any other liability the exclusion or limitation of which is prohibited by applicable law.</p>
+            <p>Subject to the preceding paragraph, and to the maximum extent permitted by law:</p>
+            <ul>
+                <li>the Company is not liable, whether in contract, tort (including negligence), under statute or otherwise, for any indirect, consequential, special, punitive or exemplary loss, or for any loss of profit, loss of revenue, loss of business, loss of opportunity, loss of anticipated savings, loss of goodwill, loss of reputation, loss of contract or loss of, corruption of or damage to data, in each case arising out of or in connection with these Terms, the Website, the Services or any Contract, even if the Company has been advised of the possibility of such loss;</li>
+                <li>the Company’s aggregate liability arising out of or in connection with a particular Contract, whether in contract, tort (including negligence), under statute or otherwise, is limited to the lower of (i) the total amount paid by the Customer to the Company under that Contract in the twelve (12) months preceding the event giving rise to the liability, and (ii) the market value at the time of the event of the Customer Materials directly affected by the event; and</li>
+                <li>the Company’s aggregate liability arising out of or in connection with the Website (other than in respect of a Contract) is limited to the market value of the precious metals forming the subject of the relevant Contract.</li>
+            </ul>
+
+            <h2>24. INDEMNITY</h2>
+            <p>The Customer shall indemnify the Company, and shall keep the Company indemnified, on a continuing basis from and against all claims, demands, proceedings, liabilities, losses, damages, costs and expenses (including legal fees on a full indemnity basis) suffered or incurred by the Company arising out of or in connection with:</p>
+            <ul>
+                <li>any breach by the Customer of these Terms or of any Contract;</li>
+                <li>any breach of any of the Customer’s warranties or undertakings;</li>
+                <li>any third-party claim arising from the Customer’s use of the Website or of any output of the Services;</li>
+                <li>any claim by any tax authority that VAT, customs duty or other tax has been incorrectly accounted for in reliance on information or undertakings provided by the Customer; and</li>
+                <li>any chargeback, payment reversal or sanctions-related action attributable to the Customer.</li>
+            </ul>
+
+            <h2>25. ANTI-BRIBERY AND CORRUPTION</h2>
+            <p>Each party warrants that, in connection with these Terms and any Contract, it has complied and will comply with all applicable anti-bribery and anti-corruption laws, including UAE Federal Decree-Law No. 31 of 2021 and any other international anti-bribery and anti-corruption laws, and that it has not offered, given, requested or accepted, and will not offer, give, request or accept, any bribe, kickback, facilitation payment or other improper benefit in connection with these Terms or any Contract.</p>
+            <p>Each party shall promptly report to the other any breach or suspected breach of this clause. Breach of this clause is deemed to be a material breach not capable of remedy. The Company maintains an Anti-Bribery and Anti-Corruption Policy and a Grievance and Whistle-Blowing Mechanism Policy, both of which are available on the Website.</p>
+
+            <h2>26. NOTICES</h2>
+            <p>Notices under these Terms must be in writing and may be given by hand, by recorded delivery or international courier, or by email to: in the case of the Company, info@fkpag.com or at the registered address.</p>
+            <p>A notice is deemed to have been received: if delivered by hand, on the day of delivery; if sent by courier, on the second Business Day after dispatch; and if sent by email, on the day of transmission, provided that no delivery-failure notification is received by the sender.</p>
+
+            <h2>27. GENERAL</h2>
+            <p>These Terms, together with the Trade Confirmation, the Company policies referenced in these Terms and any documents expressly incorporated by reference, constitute the entire agreement between the parties in respect of their subject matter and supersede all prior agreements, representations and understandings, whether written or oral.</p>
+            <p>The Customer may not assign, transfer, charge, sub-contract or otherwise dispose of any of its rights or obligations under these Terms or any Contract without the Company’s prior written consent. The Company may assign or transfer its rights and obligations to a member of its group or to a successor in business.</p>
+            <p>If any provision of these Terms is or becomes invalid, unenforceable or illegal, the remaining provisions continue in full force and effect. Where possible, the invalid provision is to be modified to the minimum extent necessary to make it valid and enforceable while preserving its commercial intent.</p>
+            <p>A failure or delay by the Company in exercising any right or remedy under these Terms or any Contract is not a waiver of that right or remedy. A single or partial exercise of any right or remedy does not preclude further exercise of the same or any other right or remedy.</p>
+            <p>Nothing in these Terms creates a partnership, joint venture, agency, fiduciary or employment relationship between the parties.</p>
+            <p>A person who is not a party to these Terms has no right to enforce any provision of them.</p>
+
+            <h2>28. GOVERNING LAW AND JURISDICTION</h2>
+            <p>These Terms, each Contract and any non-contractual obligations arising out of or in connection with them are governed by, and are to be construed in accordance with, the laws of the United Arab Emirates as applied in the Emirate of Dubai.</p>
+            <p>Subject to the following paragraph, the courts of Dubai have exclusive jurisdiction to settle any dispute arising out of or in connection with these Terms or any Contract, save that the Company retains the right to bring proceedings against the Customer in any other court of competent jurisdiction.</p>
+            <p>The Company may, at its sole option and by notice in writing to the Customer at any time before the commencement of court proceedings, elect to have a dispute resolved by arbitration administered by the Dubai International Arbitration Centre (DIAC) in accordance with its rules in force at the date of the notice. The seat of arbitration is Dubai, the language of arbitration is English and the tribunal is composed of one arbitrator. The election does not preclude either party from seeking interim or conservatory relief from any court of competent jurisdiction.</p>
+
+            <h2>29. CONTACT</h2>
+            <p>Any question about these Terms, the Website or the Services may be addressed to:</p>
+            <p>FKPA Global FZCO<br>Building A1, Dubai Digital Park, Dubai Silicon Oasis, Dubai, United Arab Emirates<br>Email: <a href="mailto:info@fkpag.com" class="contact-detail-value">info@fkpag.com</a><br>Website: <a href="http://www.fkpaglobal.com" class="contact-detail-value">www.fkpaglobal.com</a></p>
+        </div>
+    </section>
+   
+<footer class="footer">
+    <div class="footer-main-links">
+        <div class="footer-seal-col">
+            <div class="circular-seal">
+                <svg viewBox="0 0 120 120" class="seal-svg">
+                    <path id="seal-curve" d="M 60, 60 m -45, 0 a 45,45 0 1,1 90,0 a 45,45 0 1,1 -90,0" fill="transparent" />
+                    <text>
+                        <textPath href="#seal-curve" startOffset="0" textLength="280" lengthAdjust="spacing">
+                            PRIVACY BY DESIGN &bull; WEALTH BY INTENTION &bull;
+                        </textPath>
+                    </text>
+                </svg>
+                <img src="/static/logos/Fortkobbe Logo.svg" class="seal-inner-logo" alt="FKPA Shield">
+            </div>
+        </div>
+        
+        <div class="footer-link-col">
+            <h4>MEMBERSHIP</h4>
+            <a href="/#about">About FKPA Global</a>
+            <a href="/#who-we-serve">Who We Serve</a>
+            <a href="/#why-fkpa">Why FKPA Global</a>
+            <a href="/#vaults">Global Operations</a>
+        </div>
+        
+        <div class="footer-link-col">
+            <h4>CAPABILITIES</h4>
+            <a href="#">Precious Metals Access</a>
+            <a href="#">Secure Storage Solutions</a>
+            <a href="#">Strategic Advisory</a>
+            <a href="#">Market Intelligence</a>
+        </div>
+        
+        <div class="footer-link-col">
+            <h4>RESOURCES</h4>
+            <a href="/#process">Insights</a>
+            <a href="/#latest-news">Latest News</a>
+            <a href="/#faq">Frequently Asked Questions</a>
+        </div>
+        
+        <div class="footer-link-col">
+            <h4>CONNECT</h4>
+            <p>Email<br><a href="mailto:info@fkpaglobal.com">info@fkpaglobal.com</a></p>
+            <p>Location<br>Global Operations</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="footer-copy">
+            &copy; 2026 FKPA Global. All rights reserved.
+        </div>
+        <div class="footer-legal">
+            <a href="/privacy">Privacy Policy</a>
+            <a href="/terms">Terms & Conditions</a>
+            <a href="/disclaimer">Disclaimer</a>
+            <a href="/cookies">Cookie Policy</a>
+        </div>
+    </div>
+</footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        // Keep this script to animate anything else on the page that still has a .fade-up class
+        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
