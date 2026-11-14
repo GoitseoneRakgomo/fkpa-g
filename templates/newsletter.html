@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Novecento+Wide:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">   
+    <link rel="stylesheet" href="https://use.typekit.net/peb1zig.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -86,7 +87,6 @@
            LEGAL HERO FIXES (Height & Left Alignment)
            ========================================================= */
         .newsletter-hero {
-            min-height: 60vh !important; /* Increases the height */
             justify-content: flex-start !important; /* Pushes content to the left edge of the container */
         }
         .newsletter-hero-content {
@@ -137,7 +137,7 @@
     <section class="subscription-section">
         <div class="subscription-box  fade-up">
             <div class="stamp-mark" style="margin-bottom: 20px; border-color: var(--gold-primary);">
-                <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <img src="{{ url_for('static', filename='logos/icons/41EC8540-12C8-499F-9271-0A49F4D1BCB1.png') }}" alt="" aria-hidden="true">
             </div>
             <h2>Join The Private Dispatch</h2>
             <p style="text-align: center; margin-bottom: 30px;">Enter your credentials to receive periodic briefings on global liquidity, vaulting protocols, and physical asset acquisition.</p>
@@ -254,10 +254,11 @@
             &copy; 2026 FKPA Global. All rights reserved.
         </div>
         <div class="footer-legal">
+            <a href="/terms">Terms and Conditions</a>
+            <a href="/website-terms">Website Terms of Use</a>
             <a href="/privacy">Privacy Policy</a>
-            <a href="/terms">Terms & Conditions</a>
-            <a href="/disclaimer">Disclaimer</a>
             <a href="/cookies">Cookie Policy</a>
+            <a href="/disclaimer">Disclaimers</a>
         </div>
     </div>
 </footer>

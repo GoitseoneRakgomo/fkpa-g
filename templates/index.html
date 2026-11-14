@@ -1,3 +1,7 @@
+{% macro site_icon(filename) -%}
+<span class="site-icon" style="--site-icon-image: url('{{ url_for('static', filename='logos/icons/' ~ filename) }}')" aria-hidden="true"></span>
+{%- endmacro %}
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -11,17 +15,24 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Novecento+Wide:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Novecento+Wide:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">   
+    <!-- Adobe Fonts: licensed Novecento Sans Wide family used for all headings -->
+    <link rel="stylesheet" href="https://use.typekit.net/peb1zig.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Adobe Fonts (Typekit) , real, licensed Novecento Sans Wide webfont kit -->
-    <link rel="stylesheet" href="https://use.typekit.net/peb1zig.css">
 </head>
 
 <body>
+<canvas class="network-background" id="network-background" aria-hidden="true"></canvas>
+<div class="loading-screen" id="loading-screen" role="status" aria-live="polite" aria-label="Loading FKPA Global">
+    <img src="{{ url_for('static', filename='logos/Fortkobbe Logo.svg') }}" alt="" class="loading-screen-logo">
+    <span class="loading-screen-mark" aria-hidden="true"></span>
+    <p class="loading-screen-label">FKPA Global</p>
+    <p class="loading-screen-message">Preparing your global perspective</p>
+</div>
 <header>
     <a href="/" class="logo-container">
         <img src="/static/logos/Fortkobbe Logo.svg" alt="Logo" class="logo-img">
@@ -37,9 +48,11 @@
         <ul id="nav-menu">
             <li><a href="/">Home</a></li>
             <li><a href="/#about">About</a></li>
-            <li><a href="/#services">Precious Metals</a></li>
+            <li><a href="/#services">Services</a></li>
               <li><a href="/#acquisition-lifecycle">How It Works</a></li>
-            <li><a href="/#vaults">Global Storage</a></li>
+               <li><a href="/#vaults">Global Storage</a></li>
+              <li><a href="/#latest-news">Insight</a></li>
+           
           
             
             <li><a href="/#faq">FAQs</a></li>
@@ -48,10 +61,41 @@
     <a href="/#contact" class="header-btn-wrap"><button class="btn btn-outline">Speak With Our Team</button></a>
 </header>
 
+<div class="market-strip" id="market-strip" role="region" aria-label="Live market prices" data-endpoint="{{ url_for('market_prices') }}">
+    <div class="market-strip-inner">
+        <div class="market-strip-top">
+            <span class="market-strip-heading">Market Prices</span>
+            <div class="market-strip-controls">
+                <button class="market-strip-toggle" id="market-strip-toggle" type="button" aria-label="Collapse market prices" title="Collapse market prices" aria-expanded="true" aria-controls="market-strip-quotes">&#8593;</button>
+                <button class="market-strip-close" id="market-strip-close" type="button" aria-label="Close market prices" title="Close market prices">&times;</button>
+            </div>
+        </div>
+        <div class="market-strip-quotes" id="market-strip-quotes">
+          <div class="market-quote">
+            <span class="market-quote-name">Gold <small>USD / troy oz</small></span>
+            <strong data-market-price="gold">Loading...</strong>
+            <span class="market-quote-updated" data-market-updated="gold">Fetching quote</span>
+          </div>
+          <div class="market-quote">
+            <span class="market-quote-name">Silver <small>USD / troy oz</small></span>
+            <strong data-market-price="silver">Loading...</strong>
+            <span class="market-quote-updated" data-market-updated="silver">Fetching quote</span>
+          </div>
+        </div>
+        <div class="market-strip-footer" id="market-strip-footer">
+            <span class="market-strip-status" id="market-strip-status" role="status" aria-live="polite">Updating prices...</span>
+            <span>Source: <a href="https://www.gold-api.com/" target="_blank" rel="noopener noreferrer">Gold API</a></span>
+        </div>
+    </div>
+</div>
+<button class="market-strip-restore" id="market-strip-restore" type="button" aria-label="Show market prices" title="Show market prices" aria-controls="market-strip" hidden>&#8595;</button>
+
     <section class="hero-container">
-        
+       
         <div class="hero-content">
             <h1 class="hero-title">
+                 
+        <br>
                 PHYSICAL PRECIOUS METALS. 
                 <br><span>GLOBAL PERSPECTIVE.</span>
             </h1>
@@ -111,13 +155,11 @@
             </div>
             
             <div class="phb-action">
-                <a href="#contact" class="btn btn-solid">Speak With Our Team</a>
                 <div class="phb-icon">
-                    <svg viewBox="0 0 24 24">
-                        <path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/>
-                        <path d="M12 8v8M8 12h8"/>
-                    </svg>
+                    {{ site_icon('E122B69F-3B9F-4F2A-978F-03577985E94A.png') }}
                 </div>
+                                <a href="#contact" class="btn btn-solid">Speak With Our Team</a>
+
             </div>
 
         </div>
@@ -139,11 +181,7 @@
                 <div class="service-card-top">
                     <span class="service-card-num">01</span>
                     <div class="service-card-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M5 12h14M12 5l7 7-7 7"/>
-                            <rect x="2" y="3" width="20" height="4" rx="1" />
-                            <path d="M7 21h10l1-5H6l1 5z"/>
-                        </svg>
+                        {{ site_icon('CA2A512E-DA4A-483B-8DDD-EEC20BC33D13.png') }}
                     </div>
                 </div>
                 <h3>Physical Precious Metals</h3>
@@ -155,11 +193,7 @@
                 <div class="service-card-top">
                     <span class="service-card-num">02</span>
                     <div class="service-card-icon">
-                        <svg viewBox="0 0 24 24">
-                            <rect x="3" y="11" width="18" height="11" rx="2" />
-                            <circle cx="12" cy="16" r="2" />
-                            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-                        </svg>
+                        {{ site_icon('E1A01021-F6CA-4C2A-9D1D-26FA35D6E281.png') }}
                     </div>
                 </div>
                 <h3>Global Storage Coordination</h3>
@@ -171,10 +205,7 @@
                 <div class="service-card-top">
                     <span class="service-card-num">03</span>
                     <div class="service-card-icon">
-                        <svg viewBox="0 0 24 24">
-                            <circle cx="12" cy="12" r="10"/>
-                            <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-                        </svg>
+                        {{ site_icon('967FE979-99CC-403D-B0CB-A20D927D45D8.png') }}
                     </div>
                 </div>
                 <h3>Global Logistics</h3>
@@ -186,9 +217,7 @@
                 <div class="service-card-top">
                     <span class="service-card-num">04</span>
                     <div class="service-card-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M16 3h5v5M4 20L21 3M21 16v5h-5M4 4l5 5"/>
-                        </svg>
+                        {{ site_icon('FBBCC0FC-DC6F-4933-9DE1-4E4D528011CC.png') }}
                     </div>
                 </div>
                 <h3>Trade Facilitation</h3>
@@ -200,9 +229,7 @@
                 <div class="service-card-top">
                     <span class="service-card-num">05</span>
                     <div class="service-card-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/>
-                        </svg>
+                        {{ site_icon('54FDEB07-4295-479D-A096-FF3B537644A0.png') }}
                     </div>
                 </div>
                 <h3>Liquidity & Buyback</h3>
@@ -214,9 +241,7 @@
                 <div class="service-card-top">
                     <span class="service-card-num">06</span>
                     <div class="service-card-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                        </svg>
+                        {{ site_icon('6F4A4C70-F8A3-44F8-A557-AD53A0714A50.png') }}
                     </div>
                 </div>
                 <h3>Client Support</h3>
@@ -368,10 +393,7 @@
                 
                 <div class="serve-list-item fade-up fade-delay-1">
                     <div class="serve-list-icon">
-                        <svg viewBox="0 0 24 24">
-                            <circle cx="12" cy="8" r="4"/>
-                            <path d="M4 21c0-4 3.5-7 8-7s8 3 8 7"/>
-                        </svg>
+                            {{ site_icon('DA14A5C5-1E92-4930-B077-95B8830D937A.png') }}
                     </div>
                     <div class="serve-list-info">
                         <h3>Private Clients</h3>
@@ -381,11 +403,7 @@
 
                 <div class="serve-list-item fade-up fade-delay-1">
                     <div class="serve-list-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M3 21h18"/>
-                            <rect x="5" y="4" width="14" height="17"/>
-                            <path d="M9 9h6M9 13h6"/>
-                        </svg>
+                        {{ site_icon('488F1072-4DE5-4433-8EBC-36D3D2FE11E8.png') }}
                     </div>
                     <div class="serve-list-info">
                         <h3>Corporate Entities</h3>
@@ -395,9 +413,7 @@
 
                 <div class="serve-list-item fade-up fade-delay-2">
                     <div class="serve-list-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M12 2l7 4v5c0 5-3 8-7 11c-4-3-7-6-7-11V6z"/>
-                        </svg>
+                        {{ site_icon('E122B69F-3B9F-4F2A-978F-03577985E94A.png') }}
                     </div>
                     <div class="serve-list-info">
                         <h3>Trusts &amp; Other Approved Structures</h3>
@@ -407,10 +423,7 @@
 
                 <div class="serve-list-item fade-up fade-delay-2">
                     <div class="serve-list-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M12 2l8 4v6c0 5-3.5 8-8 10c-4.5-2-8-5-8-10V6z"/>
-                            <path d="M9 12l2 2l4-4"/>
-                        </svg>
+                            {{ site_icon('967FE979-99CC-403D-B0CB-A20D927D45D8.png') }}
                     </div>
                     <div class="serve-list-info">
                         <h3>International Clients</h3>
@@ -438,7 +451,7 @@
 
             <div class="hallmark-stamp">
                 <div class="stamp-mark">
-                    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a13 13 0 0 1 0 18M12 3a13 13 0 0 0 0 18"/></svg>
+                    {{ site_icon('967FE979-99CC-403D-B0CB-A20D927D45D8.png') }}
                 </div>
                 <h3>International Focus</h3>
                 <p>Designed for clients whose requirements extend beyond a single domestic market.</p>
@@ -446,7 +459,7 @@
 
             <div class="hallmark-stamp">
                 <div class="stamp-mark">
-                    <svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/></svg>
+                    {{ site_icon('CA2A512E-DA4A-483B-8DDD-EEC20BC33D13.png') }}
                 </div>
                 <h3>Physical Ownership</h3>
                 <p>Our focus is physical precious metals rather than paper or synthetic exposure.</p>
@@ -454,7 +467,7 @@
 
             <div class="hallmark-stamp">
                 <div class="stamp-mark">
-                    <svg viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="2.5"/></svg>
+                    {{ site_icon('1D4A7662-4883-44B9-99A5-6004F39F5A9D.png') }}
                 </div>
                 <h3>Personal Service</h3>
                 <p>Each relationship is handled individually rather than through a purely automated purchasing platform.</p>
@@ -462,7 +475,7 @@
 
             <div class="hallmark-stamp">
                 <div class="stamp-mark">
-                    <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="1"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    {{ site_icon('E1A01021-F6CA-4C2A-9D1D-26FA35D6E281.png') }}
                 </div>
                 <h3>Storage Flexibility</h3>
                 <p>Clients are not limited to a single storage destination.</p>
@@ -470,7 +483,7 @@
 
             <div class="hallmark-stamp">
                 <div class="stamp-mark">
-                    <svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+                    {{ site_icon('54FDEB07-4295-479D-A096-FF3B537644A0.png') }}
                 </div>
                 <h3>Coordinated Process</h3>
                 <p>Where required, we help connect the acquisition and storage sides of the process, reducing unnecessary complexity for the client.</p>
@@ -533,9 +546,7 @@
         </div>
     </div>
 
-    <div class="news-cta fade-up fade-delay-2">
-        <a href="/newsletter" class="btn btn-outline">Read More Articles</a>
-    </div>
+
 </section>
 
 <section id="faq">
@@ -550,9 +561,7 @@
             <div class="faq-item fade-up">
                 <div class="faq-question">
                     <h3>Do I own the precious metals I purchase?</h3>
-                    <div class="faq-toggle">
-                        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-                    </div>
+                    <div class="faq-toggle" aria-hidden="true"></div>
                 </div>
                 <div class="faq-answer">
                     <p>Yes. Clients retain ownership of the physical precious metals they acquire through FKPA Global, whether they choose secure storage or delivery, subject to the agreed transaction terms.</p>
@@ -562,9 +571,7 @@
             <div class="faq-item fade-up">
                 <div class="faq-question">
                     <h3>How do I get started with FKPA Global?</h3>
-                    <div class="faq-toggle">
-                        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-                    </div>
+                    <div class="faq-toggle" aria-hidden="true"></div>
                 </div>
                 <div class="faq-answer">
                     <p>Simply contact our team to discuss your requirements. Before any transaction can proceed, all clients must successfully complete our onboarding, KYC, AML, and sanctions screening process.</p>
@@ -574,9 +581,7 @@
             <div class="faq-item fade-up">
                 <div class="faq-question">
                     <h3>Why do I need to complete KYC and AML checks?</h3>
-                    <div class="faq-toggle">
-                        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-                    </div>
+                    <div class="faq-toggle" aria-hidden="true"></div>
                 </div>
                 <div class="faq-answer">
                     <p>As part of our strict compliance standards, all clients must complete Know Your Customer (KYC) and Anti-Money Laundering (AML) verification before we can conduct any business.</p>
@@ -586,9 +591,7 @@
             <div class="faq-item fade-up">
                 <div class="faq-question">
                     <h3>Does FKPA Global work with international clients?</h3>
-                    <div class="faq-toggle">
-                        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-                    </div>
+                    <div class="faq-toggle" aria-hidden="true"></div>
                 </div>
                 <div class="faq-answer">
                     <p>Yes. We work with qualified private and institutional clients in various jurisdictions, subject to applicable regulations and successful compliance checks.</p>
@@ -598,9 +601,7 @@
             <div class="faq-item fade-up">
                 <div class="faq-question">
                     <h3>Where can my precious metals be stored?</h3>
-                    <div class="faq-toggle">
-                        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-                    </div>
+                    <div class="faq-toggle" aria-hidden="true"></div>
                 </div>
                 <div class="faq-answer">
                     <p>We coordinate secure storage through approved vaulting facilities in selected jurisdictions, offering both domestic and international storage solutions.</p>
@@ -610,9 +611,7 @@
             <div class="faq-item fade-up">
                 <div class="faq-question">
                     <h3>Is my information kept confidential?</h3>
-                    <div class="faq-toggle">
-                        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-                    </div>
+                    <div class="faq-toggle" aria-hidden="true"></div>
                 </div>
                 <div class="faq-answer">
                     <p>Yes. We treat all client information with the highest level of confidentiality while adhering to applicable legal and regulatory requirements.</p>
@@ -622,9 +621,7 @@
             <div class="faq-item fade-up">
                 <div class="faq-question">
                     <h3>What makes FKPA Global different?</h3>
-                    <div class="faq-toggle">
-                        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-                    </div>
+                    <div class="faq-toggle" aria-hidden="true"></div>
                 </div>
                 <div class="faq-answer">
                     <p>With over 50 years of combined market experience, international sourcing capabilities, strict compliance standards, and secure logistics and storage solutions, FKPA Global provides a professional end-to-end precious metals service.</p>
@@ -634,9 +631,7 @@
             <div class="faq-item fade-up">
                 <div class="faq-question">
                     <h3>How long does the onboarding process take?</h3>
-                    <div class="faq-toggle">
-                        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-                    </div>
+                    <div class="faq-toggle" aria-hidden="true"></div>
                 </div>
                 <div class="faq-answer">
                     <p>The timeframe varies depending on the completion of compliance checks and the documentation provided. Our team works to complete the process as efficiently as possible.</p>
@@ -646,9 +641,7 @@
             <div class="faq-item fade-up">
                 <div class="faq-question">
                     <h3>What types of precious metals are available?</h3>
-                    <div class="faq-toggle">
-                        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-                    </div>
+                    <div class="faq-toggle" aria-hidden="true"></div>
                 </div>
                 <div class="faq-answer">
                     <p>We facilitate access to a range of physical precious metals, including gold, silver, platinum, and other approved precious metal products sourced through established international supply networks.</p>
@@ -658,9 +651,7 @@
             <div class="faq-item fade-up">
                 <div class="faq-question">
                     <h3>Why do clients acquire physical precious metals?</h3>
-                    <div class="faq-toggle">
-                        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-                    </div>
+                    <div class="faq-toggle" aria-hidden="true"></div>
                 </div>
                 <div class="faq-answer">
                     <p>Clients acquire physical precious metals for a variety of reasons, including portfolio diversification, long-term wealth preservation, and ownership of tangible assets. The suitability of any purchase depends on each client's individual objectives, financial circumstances, and risk tolerance. FKPA Global provides information about its products and services but does not provide financial, investment, tax, or legal advice.</p>
@@ -670,9 +661,7 @@
             <div class="faq-item fade-up">
                 <div class="faq-question">
                     <h3>Can FKPA Global help me choose the right metals?</h3>
-                    <div class="faq-toggle">
-                        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-                    </div>
+                    <div class="faq-toggle" aria-hidden="true"></div>
                 </div>
                 <div class="faq-answer">
                     <p>Yes. Our team works closely with clients to understand their objectives and assists with product selection, storage options, and transaction planning. We provide general product and service information only and do not provide financial, investment, tax, or legal advice or recommend any particular purchase. Clients should consider obtaining independent professional advice before making any purchasing decision.</p>
@@ -690,13 +679,13 @@
     <div class="contact-wrapper">
 
         <div class="contact-left">
-            <h2>Initiate Strategic <span style="color: var(--gold-primary);">Onboarding</span></h2>
+            <h2>Initiate Strategic Onboarding</h2>
             <p class="contact-intro">All prospective clients must complete onboarding, KYC verification, AML screening, and sanctions checks before any transaction can proceed.</p>
 
             <div class="contact-details">
                 <div class="contact-detail-item">
                     <div class="contact-detail-icon">
-                        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        {{ site_icon('41EC8540-12C8-499F-9271-0A49F4D1BCB1.png') }}
                     </div>
                     <div>
                         <p class="contact-detail-label">Email</p>
@@ -705,7 +694,7 @@
                 </div>
                 <div class="contact-detail-item">
                     <div class="contact-detail-icon">
-                        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        {{ site_icon('967FE979-99CC-403D-B0CB-A20D927D45D8.png') }}
                     </div>
                     <div>
                         <p class="contact-detail-label">Location</p>
@@ -714,7 +703,7 @@
                 </div>
                 <div class="contact-detail-item">
                     <div class="contact-detail-icon">
-                        <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                        {{ site_icon('E122B69F-3B9F-4F2A-978F-03577985E94A.png') }}
                     </div>
                     <div>
                         <p class="contact-detail-label">Regulatory</p>
@@ -778,7 +767,7 @@
                     <div class="file-upload-box">
                         <input type="file" id="idUpload" name="idUpload" accept=".pdf, .jpg, .jpeg, .png" multiple required>
                         <div class="file-upload-content">
-                            <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                            {{ site_icon('EBF9DC87-B232-4DBF-BAED-38D749ACC586.png') }}
                             <span class="file-name-display">Click to browse or drag & drop documents</span>
                             <span class="file-limits">Secure upload: PDF, JPG, PNG (Max 10MB)</span>
                         </div>
@@ -797,11 +786,10 @@
 
                 <button type="submit" class="btn-form-submit btn-solid">
                     <span>Submit Enquiry</span>
-                    <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                 </button>
 
                 <div class="form-success" id="formSuccess">
-                    <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                    {{ site_icon('E122B69F-3B9F-4F2A-978F-03577985E94A.png') }}
                     <p>Your enquiry has been received. Our team will be in touch shortly.</p>
                 </div>
             </form>
@@ -827,10 +815,9 @@
         <div class="footer-top-col right-col">
             <div class="private-salon-box">
                 <div class="salon-header">
-                    <svg class="key-icon" viewBox="0 0 24 24"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/></svg>
-                    <h4>Private Salon</h4>
+                    <h4> PHYSICAL OWNERSHIP</h4>
                 </div>
-                <p>For qualified inquiries and private consultations.</p>
+                <p>Clients acquire physical precious metals for a variety of reasons.</p>
                 <a href="#contact" class="request-access-btn btn-solid">
                     REQUEST ACCESS
                 </a>
@@ -854,11 +841,12 @@
 </div>
         
         <div class="footer-link-col">
-            <h4>MEMBERSHIP</h4>
-            <a href="/#about">About FKPA Global</a>
-            <a href="/#who-we-serve">Who We Work With</a>
-            <a href="/#why-fkpa">Why FKPA Global</a>
-            <a href="/#vaults">Global Storage</a>
+            <h4>WEBSITE POLICIES</h4>
+              <a href="/terms">Terms and Conditions</a>
+            <a href="/website-terms">Website Terms of Use</a>
+            <a href="/privacy">Privacy Policy</a>
+            <a href="/cookies">Cookie Policy</a>
+            <a href="/disclaimer">Disclaimers</a>
         </div>
         
         <div class="footer-link-col">
@@ -885,27 +873,16 @@
             &copy; 2026 FKPA Global. All rights reserved.
         </div>
         <div class="footer-legal">
+            <a href="/terms">Terms and Conditions</a>
+            <a href="/website-terms">Website Terms of Use</a>
             <a href="/privacy">Privacy Policy</a>
-            <a href="/terms">Terms & Conditions</a>
-            <a href="/disclaimer">Disclaimer</a>
             <a href="/cookies">Cookie Policy</a>
+            <a href="/disclaimer">Disclaimers</a>
         </div>
     </div>
 </footer>
 
 <script>
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-        }
-    });
-}, { threshold: 0.15 });
-
-document.querySelectorAll('.fade-up').forEach(el => {
-    observer.observe(el);
-});
-
     // Premium Intersection Observer
     const animationObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {

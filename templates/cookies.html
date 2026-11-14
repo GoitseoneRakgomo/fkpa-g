@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Novecento+Wide:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">   
+    <link rel="stylesheet" href="https://use.typekit.net/peb1zig.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
     <style>
@@ -96,7 +97,6 @@
            LEGAL HERO FIXES (Height & Left Alignment)
            ========================================================= */
         .newsletter-hero {
-            min-height: 60vh !important; /* Increases the height */
             justify-content: flex-start !important; /* Pushes content to the left edge of the container */
         }
         .newsletter-hero-content {
@@ -139,7 +139,7 @@
     <a href="/#contact" class="header-btn-wrap"><button class="btn btn-outline">Speak With Our Team</button></a>
 </header>
 
-    <section class="newsletter-hero" style="background-image: linear-gradient(to bottom, rgba(5, 5, 5, 0.8), rgba(5, 5, 5, 0.98)), url('{{ url_for('static', filename='images/back1.png') }}'); min-height: 40vh;">
+    <section class="newsletter-hero" style="background-image: linear-gradient(to bottom, rgba(5, 5, 5, 0.8), rgba(5, 5, 5, 0.98)), url('{{ url_for('static', filename='images/back1.png') }}');">
         <div class="newsletter-hero-content">
             <span class="section-label">Legal</span>
             <h1 class="hero-title">Cookie <span>Policy</span></h1>
@@ -361,10 +361,11 @@
                 &copy; 2026 FKPA Global. All rights reserved.
             </div>
             <div class="footer-legal">
+                <a href="/terms">Terms and Conditions</a>
+                <a href="/website-terms">Website Terms of Use</a>
                 <a href="/privacy">Privacy Policy</a>
-                <a href="/terms">Terms & Conditions</a>
-                <a href="/disclaimer">Disclaimer</a>
                 <a href="/cookies">Cookie Policy</a>
+                <a href="/disclaimer">Disclaimers</a>
             </div>
         </div>
     </footer>

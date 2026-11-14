@@ -1,0 +1,29 @@
+COMPLETED TASKS
+
+Implemented features identified in the current project:
+
+- Set up the Flask application and routes for the home page, market insights/newsletter page, Privacy Policy, Terms and Conditions, Disclaimer, and Cookie Policy.
+- Built the FKPA Global landing page with company information, precious-metals services, global storage coordination, acquisition lifecycle, target clients, company differentiators, news and insights, and FAQs.
+- Added site-wide branding, navigation, calls to action, footer links, and responsive styling.
+- Added interactive service tabs and an FAQ accordion.
+- Added a mobile navigation menu that opens and closes and prevents background scrolling while open.
+- Added an onboarding/contact form interface with client and interest fields, consent, and multi-file document upload selection.
+- Added client-side display of selected document names and upload counts.
+- Built a market insights page with a newsletter sign-up interface and three recent publication entries.
+- Added dedicated legal information pages for privacy, terms, disclaimers, and cookies.
+
+Front-end design, styling, fixes, and responsive updates in `static/css/style.css`:
+
+- Established a dark luxury visual system using black surfaces, gold accents, shared CSS color/font variables, global resets, consistent section spacing, and reusable heading treatments.
+- Applied the brand typography system, including the Novecento Sans Wide heading stack, Open Sans body copy, and a defined fallback for timeline headings that previously lacked a font variable.
+- Styled the sticky header, logo, navigation, hover treatments, hero sections, CTA buttons, and shared content containers.
+- Added ambient gold gradients/glows, section backgrounds, dividers, borders, and subtle logo/heading animation treatments.
+- Styled the landing-page content areas and reusable UI patterns, including about/service content, service cards and tabs, lifecycle timeline cards, vault/storage cards, immersive banners, news cards, FAQs, contact/onboarding form elements, and footer content.
+- Standardized desktop body-copy sizing and line-height, navigation/footer typography, and CTA/button dimensions and alignment.
+- Added mobile typography and button adjustments, full-width stacked CTAs, compact header sizing, and additional hero top spacing to clear the header.
+- Added responsive layouts for lifecycle cards, vault cards, and immersive banners; the mobile banner switches away from fixed parallax backgrounds and disables masks to avoid mobile rendering artifacts.
+- Corrected mobile vault text alignment and section heading alignment, and centered the footer seal on small screens.
+- Documented later layout refinements for flush hero alignment and extended width, global footer-grid realignment, footer seal alignment, and justified footer introductory copy.
+
+Implementation note:
+- The contact/onboarding and newsletter forms are present as page interfaces. The Flask routes currently render pages only; no form submission or newsletter subscription processing was identified.
