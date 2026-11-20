@@ -37,8 +37,8 @@
     --type-subtitle-font: 'Cinzel', serif;
     --type-subheading-font: 'Cinzel', serif;
     --type-section-header-font: 'Cinzel', serif;
-    --type-body-font: 'Open Sans', sans-serif;
-    --type-quote-font: 'Open Sans', sans-serif;
+    --type-body-font: 'inter', sans-serif;
+    --type-quote-font: 'inter', sans-serif;
     --type-caption-font: 'Open Sans', sans-serif;
 
     /* This was referenced (timeline card headings) but never actually
@@ -5160,4 +5160,195 @@ header .logo-img {
 
 .footer-brand-name {
     display: none !important;
+}
+/* Logo sizing adjustments */
+header .logo-img {
+    height: 38.5px !important; /* Increased by 10% from 35px */
+}
+
+@media (max-width: 850px) {
+    header .logo-img {
+        height: 31.5px !important;
+    }
+}
+/* =========================================================
+   SINGLE FEATURED VAULTING HUB SECTION
+   ========================================================= */
+.vault-feature-card {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    background: linear-gradient(145deg, #0e0e0e 0%, #070707 100%);
+    border: 1px solid rgba(197, 160, 89, 0.25);
+    margin-top: 40px;
+    overflow: hidden;
+    position: relative;
+}
+
+.vault-feature-media {
+    position: relative;
+    min-height: 400px;
+    overflow: hidden;
+    border-right: 1px solid rgba(197, 160, 89, 0.15);
+}
+
+.vault-feature-media img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(0.25) brightness(0.75) contrast(1.1);
+    transition: transform 0.8s var(--cinematic-ease), filter 0.8s ease;
+}
+
+.vault-feature-card:hover .vault-feature-media img {
+    transform: scale(1.04);
+    filter: grayscale(0) brightness(0.95) contrast(1.1);
+}
+
+.vault-feature-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, transparent 60%, rgba(10, 10, 10, 0.85) 100%);
+    pointer-events: none;
+}
+
+.vault-feature-content {
+    padding: 60px 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.vault-feature-content .section-label {
+    font-size: 11px !important;
+    letter-spacing: 0.22em !important;
+    margin-bottom: 14px;
+}
+
+.vault-feature-content h3 {
+    font-size: 28px !important;
+    color: var(--gold-primary) !important;
+    margin-bottom: 20px !important;
+}
+
+.vault-feature-content p {
+    color: rgba(255, 255, 255, 0.7);
+    text-align: left !important;
+    margin-bottom: 32px;
+}
+
+.vault-feature-action {
+    margin-top: auto;
+}
+
+@media (max-width: 900px) {
+    .vault-feature-card {
+        grid-template-columns: 1fr;
+    }
+
+    .vault-feature-media {
+        min-height: 260px;
+        border-right: none;
+        border-bottom: 1px solid rgba(197, 160, 89, 0.15);
+    }
+
+    .vault-feature-overlay {
+        background: linear-gradient(to bottom, transparent 60%, rgba(10, 10, 10, 0.9) 100%);
+    }
+
+    .vault-feature-content {
+        padding: 40px 28px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .vault-feature-content p {
+        text-align: center !important;
+    }
+
+    .vault-feature-action {
+        width: 100%;
+    }
+}
+/* =========================================================
+   HERO BACKGROUND VIDEO ONLY (NO IMAGE)
+   ========================================================= */
+section.hero-container,
+.hero-container {
+    position: relative !important;
+    overflow: hidden !important;
+    background: #050505 !important;
+    background-image: none !important;
+}
+
+.hero-bg-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.hero-video-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(5, 5, 5, 0.88) 0%,
+        rgba(5, 5, 5, 0.65) 55%,
+        rgba(5, 5, 5, 0.45) 100%
+    );
+    z-index: 1;
+    pointer-events: none;
+}
+
+.hero-container .hero-content {
+    position: relative;
+    z-index: 2;
+}
+/* =========================================================
+   HERO BACKGROUND VIDEO FIX
+   ========================================================= */
+body > section.hero-container,
+section.hero-container,
+.hero-container {
+    position: relative !important;
+    overflow: hidden !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+}
+
+.hero-bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.hero-video-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(5, 5, 5, 0.85) 0%,
+        rgba(5, 5, 5, 0.55) 55%,
+        rgba(5, 5, 5, 0.35) 100%
+    );
+    z-index: 1;
+    pointer-events: none;
+}
+
+.hero-container .hero-content {
+    position: relative;
+    z-index: 2;
 }
