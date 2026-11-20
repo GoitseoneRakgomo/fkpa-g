@@ -5352,3 +5352,8 @@ section.hero-container,
     position: relative;
     z-index: 2;
 }
+/* Pre-footer brand banner: 200% larger than its current size */
+.footer-crest {
+    width: 336px !important;
+    margin-bottom: 14px;
+}
