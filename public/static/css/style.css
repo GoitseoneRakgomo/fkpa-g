@@ -32,11 +32,11 @@
        superfamily, same "wide" cut, closest realistic match, and it's
        already loaded at no extra cost. Distinguished from the smaller
        styles by size/weight rather than a different family. */
-    --type-title-font: 'novecento-sans-wide', var(--font-wide);
-    --type-heading-font: 'novecento-sans-wide', var(--font-wide);
-    --type-subtitle-font: 'novecento-sans-wide', var(--font-wide);
-    --type-subheading-font: 'novecento-sans-wide', var(--font-wide);
-    --type-section-header-font: 'novecento-sans-wide', var(--font-wide);
+    --type-title-font: 'Cinzel', serif;
+    --type-heading-font: 'Cinzel', serif;
+    --type-subtitle-font: 'Cinzel', serif;
+    --type-subheading-font: 'Cinzel', serif;
+    --type-section-header-font: 'Cinzel', serif;
     --type-body-font: 'Open Sans', sans-serif;
     --type-quote-font: 'Open Sans', sans-serif;
     --type-caption-font: 'Open Sans', sans-serif;
@@ -3755,27 +3755,35 @@ h2,
        plays those roles yet — apply the class wherever needed.
    ========================================================= */
 
-/* TITLE — Novecento Wide, 42px */
+/* TITLE — Cinzel, 42px */
 .hero-title {
     font-family: var(--type-title-font) !important;
     font-size: 42px !important;
-    /* Real Novecento Sans Wide is loaded now (see the Adobe Fonts kit
-       in <head>), and it only ships 400/700 weights — 700 is genuine
-       bold in this font, so no need to fake a heavier weight anymore. */
-    font-weight: 700 !important;
+    font-weight: 400 !important;
     font-style: normal !important;
 }
 
-/* Use the loaded Novecento Sans Wide family consistently for every heading. */
-h1, h2, h3, h4, h5, h6 {
+/* Keep every heading in the reference's regular-weight Cinzel style. */
+h1, h2, h3, h4, h5, h6,
+.hero-title,
+.section-header h2,
+.serve-section-heading h2,
+.contact-left h2,
+.phb-text h2,
+.news-content h2,
+.news-content h4,
+.serve-item h2,
+.serve-item h4 {
     font-family: var(--type-heading-font) !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
 }
 
-/* SUBTITLE — 36px, Bold (utility class) */
+/* SUBTITLE — 36px (utility class) */
 .subtitle-text {
     font-family: var(--type-subtitle-font) !important;
     font-size: 36px !important;
-    font-weight: 700 !important;
+    font-weight: 400 !important;
     font-style: normal !important;
 }
 
@@ -3786,24 +3794,24 @@ h1, h2, h3, h4, h5, h6 {
 .phb-text h2 {
     font-family: var(--type-heading-font) !important;
     font-size: 32px !important;
-    font-weight: 700 !important;
+font-weight: 400 !important;
     font-style: normal !important;
 }
 
-/* SUBHEADING — 24px, Bold */
+/* SUBHEADING — 24px */
 h3 {
     font-family: var(--type-subheading-font) !important;
     font-size: 24px !important;
-    font-weight: 700 !important;
+font-weight: 400 !important;
     font-style: normal !important;
 }
 
-/* SECTION HEADER — 20px, Bold */
+/* SECTION HEADER — 20px */
 .section-label,
 .serve-subtitle {
     font-family: var(--type-section-header-font) !important;
     font-size: 20px !important;
-    font-weight: 700 !important;
+font-weight: 400 !important;
     font-style: normal !important;
 }
 
